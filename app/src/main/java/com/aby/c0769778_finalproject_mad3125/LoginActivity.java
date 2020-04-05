@@ -34,11 +34,12 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnlogin;
     private Switch swchRememberMe;
 
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     public static final String PREFS_NAME = "MyPrefsFile";
     private static final String PREF_USERNAME = "username";
     private static final String PREF_PASSWORD = "password";
-    SharedPreferences SP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +54,16 @@ public class LoginActivity extends AppCompatActivity {
         edtEmailId = findViewById(R.id.edtEmailId);
         edtPassword = findViewById(R.id.edtPassword);
 
-        SharedPreferences pref = getSharedPreferences(PREFS_NAME,MODE_PRIVATE);
-        String email = pref.getString(PREF_USERNAME, null);
-        String password = pref.getString(PREF_PASSWORD, null);
-        edtEmailIdText.setText(email);
-        edtPasswordText.setText(password);
-
         ArrayList<String> emailList = new ArrayList<>();
         ArrayList<String> passwordList = new ArrayList<>();
+
+        sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        String email = sharedPreferences.getString(PREF_USERNAME, null);
+        String password = sharedPreferences.getString(PREF_PASSWORD, null);
+        edtEmailIdText.setText(email);
+        edtPasswordText.setText(password);
 
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset());
@@ -93,14 +96,16 @@ public class LoginActivity extends AppCompatActivity {
                 for(int i=0, j =0; i<emailList.size(); i++,j++){
                     if(emailList.get(i).equals(edtEmailIdText.getText().toString()) && passwordList.get(i).equals(edtPasswordText.getText().toString()))
                     {
-                        if (swchRememberMe.isActivated())
+                        if(swchRememberMe.isChecked()){
+                            editor.putString(PREF_USERNAME,edtEmailIdText.getText().toString());
+                            editor.putString(PREF_PASSWORD,edtPasswordText.getText().toString());
+                            editor.apply();
+                        }
+                        else
                         {
-                            SharedPreferences.Editor editit = SP.edit();
-                            //getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
-                                    //.edit()
-                                    editit.putString(PREF_USERNAME, edtEmailIdText.getText().toString());
-                                    editit.putString(PREF_PASSWORD, edtPasswordText.getText().toString());
-                                    editit.apply();
+                            editor.putString(PREF_USERNAME,"");
+                            editor.putString(PREF_PASSWORD,"");
+                            editor.commit();
                         }
                         Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
                         startActivity(mIntent);
