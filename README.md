@@ -23,3 +23,4 @@ Screenshot | Description
 * [Abhiandroid.com](https://abhiandroid.com/programming/json#JSONArray_Parsing_methods) - Used for json parsing
 * [JournalDev.com](https://www.journaldev.com/14748/android-textinputlayout-example) - Used in designing TextInputLayouts
 * [Medium.com](https://medium.com/viithiisys/android-perfect-way-to-create-splash-screen-ca3c5bee137f) - Creating a splash screen
+* [Thecodeexpo.com](https://thecodeexpo.blogspot.com/2018/09/login-screen-remember-me-example.html) - Implementing remember me switch using shared preferences
