@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtEmailId"
@@ -20,7 +20,10 @@
         android:inputType="textPersonName"
         android:textColorHint="#FFFFFF"
         app:boxStrokeColor="#FFFFFF"
+        app:boxStrokeErrorColor="#FFFFFF"
         app:boxStrokeWidth="4dp"
+        app:errorEnabled="false"
+        app:errorTextColor="#FFFFFF"
         app:hintTextColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +56,9 @@
         android:inputType="textPersonName"
         android:textColorHint="#FFFFFF"
         app:boxStrokeColor="#FFFFFF"
+        app:boxStrokeErrorColor="#FFFFFF"
         app:boxStrokeWidth="4dp"
+        app:errorTextColor="#FFFFFF"
         app:hintTextColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
