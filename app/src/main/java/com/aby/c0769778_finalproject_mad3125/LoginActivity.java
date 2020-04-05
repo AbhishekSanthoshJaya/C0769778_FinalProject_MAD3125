@@ -82,11 +82,12 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(edtEmailIdText.getText().toString().isEmpty()){
-                    edtPassword.setError("Enter your email address");
+                    edtEmailId.setError("Enter your email address");
                 }
 
                 if(edtPasswordText.getText().toString().isEmpty()){
                     edtPassword.setError("Enter your password");
+                    return;
                 }
 
                 for(int i=0, j =0; i<emailList.size(); i++,j++){
