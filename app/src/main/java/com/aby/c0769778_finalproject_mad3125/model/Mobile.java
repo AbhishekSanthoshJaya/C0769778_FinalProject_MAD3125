@@ -27,4 +27,44 @@ public class Mobile extends Bill {
         billAmount = (this.mobGbUsed) * 25 + (this.minute) * 0.2;
         return billAmount;
     }
+
+    public String getManufacturerName() {
+        return manufacturerName;
+    }
+
+    public void setManufacturerName(String manufacturerName) {
+        this.manufacturerName = manufacturerName;
+    }
+
+    public String getPlanName() {
+        return planName;
+    }
+
+    public void setPlanName(String planName) {
+        this.planName = planName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public Integer getMobGbUsed() {
+        return mobGbUsed;
+    }
+
+    public void setMobGbUsed(Integer mobGbUsed) {
+        this.mobGbUsed = mobGbUsed;
+    }
+
+    public Integer getMinute() {
+        return minute;
+    }
+
+    public void setMinute(Integer minute) {
+        this.minute = minute;
+    }
 }

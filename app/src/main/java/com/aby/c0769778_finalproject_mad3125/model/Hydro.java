@@ -25,4 +25,20 @@ public class Hydro extends Bill {
         }
         return billAmount;
     }
+
+    public String getAgencyName() {
+        return agencyName;
+    }
+
+    public void setAgencyName(String agencyName) {
+        this.agencyName = agencyName;
+    }
+
+    public Integer getUnitsUsed() {
+        return unitsUsed;
+    }
+
+    public void setUnitsUsed(Integer unitsUsed) {
+        this.unitsUsed = unitsUsed;
+    }
 }

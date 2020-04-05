@@ -24,5 +24,21 @@ public class Internet extends Bill {
         }
         return billAmount;
     }
+
+    public String getProviderName() {
+        return providerName;
+    }
+
+    public void setProviderName(String providerName) {
+        this.providerName = providerName;
+    }
+
+    public Double getGbUsed() {
+        return gbUsed;
+    }
+
+    public void setGbUsed(Double gbUsed) {
+        this.gbUsed = gbUsed;
+    }
 }
 

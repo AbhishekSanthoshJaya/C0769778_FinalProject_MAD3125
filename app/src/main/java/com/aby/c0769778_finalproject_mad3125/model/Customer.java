@@ -35,4 +35,76 @@ public class Customer {
         this.customerBills = customerBills;
         this.allTotal = allTotal;
     }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public HashMap<String, Bill> getCustomerBills() {
+        return customerBills;
+    }
+
+    public void setCustomerBills(HashMap<String, Bill> customerBills) {
+        this.customerBills = customerBills;
+    }
+
+    public Double getAllTotal() {
+        return allTotal;
+    }
+
+    public void setAllTotal(Double allTotal) {
+        this.allTotal = allTotal;
+    }
 }
