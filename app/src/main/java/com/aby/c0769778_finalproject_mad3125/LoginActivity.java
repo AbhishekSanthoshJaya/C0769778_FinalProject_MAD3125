@@ -115,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                 new MaterialAlertDialogBuilder(LoginActivity.this)
                         .setTitle("Invalid username or password")
                         .setMessage("Please check the information you entered")
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();

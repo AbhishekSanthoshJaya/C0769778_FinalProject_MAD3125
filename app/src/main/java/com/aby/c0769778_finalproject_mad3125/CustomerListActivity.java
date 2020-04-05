@@ -24,6 +24,5 @@ public class CustomerListActivity extends AppCompatActivity {
                 startActivity(mIntent);
             }
         });
-
     }
 }
