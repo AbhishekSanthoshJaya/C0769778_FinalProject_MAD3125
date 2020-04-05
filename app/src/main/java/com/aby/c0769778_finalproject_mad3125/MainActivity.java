@@ -64,9 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     else{
                         Toast.makeText(MainActivity.this, "Invalid", Toast.LENGTH_SHORT).show();
                     }
-
                 }
-
             }
         });
     }
