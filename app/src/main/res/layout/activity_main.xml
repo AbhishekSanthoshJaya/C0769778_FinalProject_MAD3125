@@ -9,7 +9,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtEmailId"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -27,22 +27,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425">
+        app:layout_constraintVertical_bias="0.442"
+        app:startIconDrawable="@android:drawable/ic_dialog_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtEmailIdText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/rounded_edittext"
-            android:drawableLeft="@android:drawable/sym_action_email"
-            android:hint="   Enter your email"
+            android:hint="Enter your email"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtPassword"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -57,10 +57,12 @@
         app:hintTextColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453">
+        app:layout_constraintVertical_bias="0.481"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtPasswordText"
@@ -68,7 +70,8 @@
             android:layout_height="match_parent"
             android:background="@drawable/rounded_edittext"
             android:drawableLeft="@android:drawable/ic_lock_idle_lock"
-            android:hint="    Enter your password"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
             android:textColor="#000000"
             android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,13 +116,14 @@
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="269dp"
         android:backgroundTint="@color/colorPrimary"
+        android:scrollbarSize="4sp"
         android:shadowColor="@color/colorPrimary"
-        android:theme="@style/SwitchTheme"
         android:text="Remember Me"
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
         android:textColorLink="#DD2323"
         android:textSize="18sp"
+        android:theme="@style/SwitchTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
