@@ -22,7 +22,7 @@ public class Customer {
                      String password,
                      String location,
                      String dateOfBirth,
-                     HashMap customerBills,
+                     HashMap<String, Bill> customerBills,
                      Double allTotal)
     {
         this.customerId = customerId;
@@ -30,7 +30,7 @@ public class Customer {
         this.email = email;
         this.userName = userName;
         this.password = password;
-        this.location = dateOfBirth;
+        this.location = location;
         this.dateOfBirth = dateOfBirth;
         this.customerBills = customerBills;
         this.allTotal = allTotal;

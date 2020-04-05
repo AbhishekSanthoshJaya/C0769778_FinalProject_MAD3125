@@ -23,7 +23,7 @@ public class Mobile extends Bill {
     //Overriding default implementation of billCalculate in Bill class
     @Override
      public Double billCalculate(){
-        Double billAmount = 0.0;
+        double billAmount = 0.0;
         billAmount = (this.mobGbUsed) * 25 + (this.minute) * 0.2;
         return billAmount;
     }

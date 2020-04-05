@@ -133,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
     public String loadJSONFromAsset() {
         String json = null;
         try {
-            InputStream is = getAssets().open("UserInformation.json");
+            InputStream is = getAssets().open("LoginInformation.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);

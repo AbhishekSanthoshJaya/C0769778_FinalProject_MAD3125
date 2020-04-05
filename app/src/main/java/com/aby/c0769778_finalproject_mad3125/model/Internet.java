@@ -15,7 +15,7 @@ public class Internet extends Bill {
 
     @Override
     public Double billCalculate(){
-        Double billAmount = 0.0;
+        double billAmount = 0.0;
         if( gbUsed < 10){
             billAmount = 3 * gbUsed;
         }
