@@ -10,10 +10,10 @@ public abstract class Bill {
         Hydro,
         Internet,
     }
-    private String billId;
-    private LocalDate billDate;
-    private BillType billType;
-    private Double billTotal;
+     String billId;
+     LocalDate billDate;
+     BillType billType;
+     Double billTotal;
 
     public Bill(String billId, LocalDate billDate, BillType billType, Double billTotal)
         {

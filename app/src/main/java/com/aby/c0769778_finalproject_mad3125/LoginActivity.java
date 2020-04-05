@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             editor.putString(PREF_USERNAME,"");
                             editor.putString(PREF_PASSWORD,"");
-                            editor.commit();
+                            editor.apply();
                         }
                         Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
                         startActivity(mIntent);
