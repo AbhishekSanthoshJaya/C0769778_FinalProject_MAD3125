@@ -1,16 +1,24 @@
-[{
-  "email": "imasson0@yolasite.com",
-  "password": "OB1wa3f"
-}, {
-  "email": "gorta1@yellowpages.com",
-  "password": "veCDcVf7X"
-}, {
-  "email": "wstratten2@github.com",
-  "password": "fnQESzUzL"
-}, {
-  "email": "esiggee3@bbc.co.uk",
-  "password": "O0YTDize"
-}, {
-  "email": "lmart4@t.co",
-  "password": "Q8w9gvCha"
-}]
+{
+  "users": [
+    {
+      "email": "aby@gmail.com",
+      "password": "codenoob"
+    },
+    {
+      "email": "prakash@gmail.com",
+      "password": "codemaster"
+    },
+    {
+      "email": "raghav@gmail.com",
+      "password": "password"
+    },
+    {
+      "email": "pritesh@gmail.com",
+      "password": "codegod"
+    },
+    {
+      "email": "kritima@gmail.com",
+      "password": "codegenius"
+    }
+  ]
+}
