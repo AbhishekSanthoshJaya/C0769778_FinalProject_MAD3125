@@ -33,6 +33,10 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public void addBill(String billId, Bill bill){
+        this.customerBills.put(billId, bill);
+    }
+
     public String getCustomerId() {
         return customerId;
     }

@@ -52,5 +52,7 @@ public class DataRepository {
                 "SKYLINK",
                 22.8);
 
+        c1.addBill("MB100", m1);
+        c1.addBill("HY100", h1);
     }
 }
