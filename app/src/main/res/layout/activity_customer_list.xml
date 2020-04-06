@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".CustomerListActivity">
+    tools:context=".activities.CustomerListActivity">
 
     <Button
         android:id="@+id/btnLogOut"

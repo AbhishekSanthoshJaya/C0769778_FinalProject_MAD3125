@@ -6,7 +6,7 @@ import java.util.Date;
 
 public abstract class Bill {
 
-    enum BillType {
+    public enum BillType {
         Mobile,
         Hydro,
         Internet,
