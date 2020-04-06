@@ -1,9 +1,13 @@
 package com.aby.c0769778_finalproject_mad3125.model;
 
+import android.content.Context;
 import android.os.Build;
 import android.view.ContextThemeWrapper;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+
+import com.aby.c0769778_finalproject_mad3125.LoginActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +25,7 @@ public class DataRepository {
     private DataRepository() {
     }
 
-    private DataRepository getInstance() {
+    public static DataRepository getInstance() {
         return repoObj;
     }
 
@@ -55,4 +59,9 @@ public class DataRepository {
         c1.addBill("MB100", m1);
         c1.addBill("HY100", h1);
     }
+
+    public void makeToast(String message, Context context){
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
 }

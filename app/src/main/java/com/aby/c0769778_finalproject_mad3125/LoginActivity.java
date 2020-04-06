@@ -132,10 +132,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void makeToast(String message){
-        Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
-    }
-
     public String loadJSONFromAsset(String filename) {
         String json = null;
         try {
