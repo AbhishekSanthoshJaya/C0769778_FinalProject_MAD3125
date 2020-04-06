@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPasswordText.setText(password);
 
         try {
-            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            JSONObject obj = new JSONObject(loadJSONFromAsset("LoginInformation.json"));
             JSONArray userArray = obj.getJSONArray("users");
             for (int i = 0; i < userArray.length(); i++) {
                 JSONObject userInfo = userArray.getJSONObject(i);
@@ -78,7 +78,6 @@ public class LoginActivity extends AppCompatActivity {
         {
             e.printStackTrace();
         }
-
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
                         })
                         .show();
+                return;
             }
         });
     }
@@ -130,10 +130,10 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 
-    public String loadJSONFromAsset() {
+    public String loadJSONFromAsset(String filename) {
         String json = null;
         try {
-            InputStream is = getAssets().open("LoginInformation.json");
+            InputStream is = getAssets().open(filename);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
