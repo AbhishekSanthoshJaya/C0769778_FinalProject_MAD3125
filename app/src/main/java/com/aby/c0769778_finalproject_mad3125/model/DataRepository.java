@@ -40,6 +40,16 @@ public class DataRepository {
                 "4379077578",
                 1,
                 6);
+        Hydro h1 = new Hydro( "HY100",
+                LocalDate.of(2019, 10, 12),
+                Bill.BillType.Hydro,
+                "PUREWATA",
+                22);
+        Internet in1 = new Internet("IN100",
+                LocalDate.of(2019, 10, 12),
+                Bill.BillType.Internet,
+                "SKYLINK",
+                22.8);
 
     }
 }
