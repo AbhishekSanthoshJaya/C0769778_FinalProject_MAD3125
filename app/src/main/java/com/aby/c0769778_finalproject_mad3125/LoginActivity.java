@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -61,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         editor = sharedPreferences.edit();
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.welcome);
 
         String email = sharedPreferences.getString(PREF_USERNAME, null);
         String password = sharedPreferences.getString(PREF_PASSWORD, null);
@@ -108,6 +111,7 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putString(PREF_PASSWORD,"");
                             editor.apply();
                         }
+                        mp.start();
                         Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
                         startActivity(mIntent);
                         return;

@@ -16,7 +16,7 @@ public abstract class Bill {
      BillType billType;
      Double billTotal;
 
-    public Bill(String billId, LocalDate billDate, BillType billType)
+    Bill(String billId, LocalDate billDate, BillType billType)
         {
           this.billId = billId;
           this.billDate = billDate;
