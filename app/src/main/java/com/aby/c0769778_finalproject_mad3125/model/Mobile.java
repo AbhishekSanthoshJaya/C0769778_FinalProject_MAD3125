@@ -6,18 +6,18 @@ public class Mobile extends Bill {
 
     private String manufacturerName;
     private String planName;
-    private String PlanName;
     private String mobileNumber;
     private Integer mobGbUsed;
     private Integer minute;
 
-    public Mobile(String billId, LocalDate billDate, BillType billType, Double billTotal, String manufacturerName, String planName, String mobileNumber, Integer mobGbUsed, Integer minute){
-        super(billId, billDate, billType, billTotal);
+    public Mobile(String billId, LocalDate billDate, BillType billType, String manufacturerName, String planName, String mobileNumber, Integer mobGbUsed, Integer minute){
+        super(billId, billDate, billType);
         this.manufacturerName = manufacturerName;
         this.planName = planName;
         this.mobileNumber = mobileNumber;
         this.mobGbUsed = mobGbUsed;
         this.minute = minute;
+        this.billTotal = billCalculate();
     }
 
     //Overriding default implementation of billCalculate in Bill class

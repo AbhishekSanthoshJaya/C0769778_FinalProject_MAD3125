@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "aby@gmail.com",
-      "password": "codenoob"
+      "password": "123"
     },
     {
       "email": "prakash@gmail.com",
@@ -10,7 +10,7 @@
     },
     {
       "email": "raghav@gmail.com",
-      "password": "password"
+      "password": "codenoob"
     },
     {
       "email": "pritesh@gmail.com",
@@ -18,7 +18,7 @@
     },
     {
       "email": "kritima@gmail.com",
-      "password": "codegenius"
+      "password": "codepro"
     }
   ]
 }

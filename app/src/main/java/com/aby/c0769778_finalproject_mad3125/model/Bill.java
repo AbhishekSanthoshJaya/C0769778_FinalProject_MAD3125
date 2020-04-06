@@ -15,12 +15,11 @@ public abstract class Bill {
      BillType billType;
      Double billTotal;
 
-    public Bill(String billId, LocalDate billDate, BillType billType, Double billTotal)
+    public Bill(String billId, LocalDate billDate, BillType billType)
         {
           this.billId = billId;
           this.billDate = billDate;
           this.billType = billType;
-          this.billTotal = billTotal;
         }
 
     public Double billCalculate(){

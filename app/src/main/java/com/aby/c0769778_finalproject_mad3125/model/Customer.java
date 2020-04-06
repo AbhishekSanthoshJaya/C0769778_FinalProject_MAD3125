@@ -21,9 +21,8 @@ public class Customer {
                      String userName,
                      String password,
                      String location,
-                     String dateOfBirth,
-                     HashMap<String, Bill> customerBills,
-                     Double allTotal)
+                     String dateOfBirth
+                     )
     {
         this.customerId = customerId;
         this.name = name;
@@ -32,8 +31,6 @@ public class Customer {
         this.password = password;
         this.location = location;
         this.dateOfBirth = dateOfBirth;
-        this.customerBills = customerBills;
-        this.allTotal = allTotal;
     }
 
     public String getCustomerId() {
