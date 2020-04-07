@@ -32,35 +32,35 @@ public class DataRepository {
 
     public void loadData() {
         Customer c1 = new Customer("ABY1",
-                "Abhishek",
+                "Abhishek Santhosh",
                 "aby@gmail.com",
                 "aby",
                 "aby123",
                 "Kerala, India",
                 "18/04/1995", R.drawable.icon_aby);
         Customer c2 = new Customer("ABY2",
-                "Prakash",
+                "Prakash Rana",
                 "prakash@gmail.com",
                 "Rana",
                 "codemaster",
                 "Kathmandu, Nepal",
                 "27/04/1995", R.drawable.icon_prakash);
         Customer c3 = new Customer("ABY3",
-                "Pritesh",
+                "Priteshkumar Patel",
                 "pritesh@gmail.com",
                 "TheLion",
                 "codegod",
                 "Gujarat, India",
                 "18/04/1995", R.drawable.icon_pritesh);
         Customer c4 = new Customer("ABY4",
-                "Kritima",
+                "Kritima Kukreja",
                 "kritima@gmail.com",
                 "Kritima",
                 "codepro",
                 "Delhi, India",
                 "01/01/1996", R.drawable.icon_kritima);
         Customer c5 = new Customer("ABY5",
-                "Raghav",
+                "Raghav Bobal",
                 "aby@gmail.com",
                 "Raghav",
                 "password",
@@ -84,8 +84,8 @@ public class DataRepository {
                 Bill.BillType.Internet,
                 "SKYLINK",
                 22.8);
-//        c1.addBill("MB100", m1);
-////      c1.addBill("HY100", h1);
+        c1.addBill("MB100", m1);
+        c1.addBill("HY100", h1);
         customerMap.put(c1.getCustomerId(),c1);
         customerMap.put(c2.getCustomerId(),c2);
         customerMap.put(c3.getCustomerId(),c3);

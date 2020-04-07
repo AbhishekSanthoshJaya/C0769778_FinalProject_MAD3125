@@ -12,7 +12,7 @@ public class Customer {
     private String password;
     private String location;
     private String dateOfBirth;
-    private HashMap<String, Bill> customerBills;
+    private HashMap<String, Bill> customerBills = new HashMap<>();
     private Double allTotal;
     private int customerImg;
 
