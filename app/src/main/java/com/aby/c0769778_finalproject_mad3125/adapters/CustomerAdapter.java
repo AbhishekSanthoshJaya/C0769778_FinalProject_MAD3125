@@ -38,6 +38,8 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
     public void onBindViewHolder(@NonNull CustomerViewHolder holder, int position) {
         Customer mCustomers = this.customerArrayList.get(position);
         holder.txtName.setText(mCustomers.getName());
+        holder.imgCustomerIcon.setImageResource(mCustomers.getCustomerImg());
+        holder.txtLocation.setText(mCustomers.getLocation());
     }
 
     @Override
@@ -47,11 +49,15 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
 
     public class CustomerViewHolder extends RecyclerView.ViewHolder {
         TextView txtName;
+        ImageView imgCustomerIcon;
+        TextView txtLocation;
 
         public CustomerViewHolder(@NonNull View itemView)
         {
             super(itemView);
-              txtName = itemView.findViewById(R.id.txtName);
+            imgCustomerIcon = itemView.findViewById(R.id.imgCustomerIcon);
+            txtName = itemView.findViewById(R.id.txtName);
+            txtLocation = itemView.findViewById(R.id.txtLocation);
         }
     }
 }

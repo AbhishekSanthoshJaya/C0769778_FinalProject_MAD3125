@@ -14,6 +14,11 @@ public class Customer {
     private String dateOfBirth;
     private HashMap<String, Bill> customerBills;
     private Double allTotal;
+    private int customerImg;
+
+    public int getCustomerImg() {
+        return customerImg;
+    }
 
     public Customer (String customerId,
                      String name,
@@ -21,8 +26,8 @@ public class Customer {
                      String userName,
                      String password,
                      String location,
-                     String dateOfBirth
-                     )
+                     String dateOfBirth,
+                     Integer customerImg)
     {
         this.customerId = customerId;
         this.name = name;
@@ -31,6 +36,7 @@ public class Customer {
         this.password = password;
         this.location = location;
         this.dateOfBirth = dateOfBirth;
+        this.customerImg = customerImg;
     }
 
     public void addBill(String billId, Bill bill)
