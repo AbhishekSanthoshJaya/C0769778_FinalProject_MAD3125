@@ -31,41 +31,41 @@ public class DataRepository {
     { }
 
     public void loadData() {
-        Customer c1 = new Customer("ABY1",
+        Customer c1 = new Customer("ID001",
                 "Abhishek Santhosh",
                 "aby@gmail.com",
                 "aby",
                 "aby123",
                 "Kerala, India",
                 "18/04/1995", R.drawable.icon_aby);
-        Customer c2 = new Customer("ABY2",
+        Customer c2 = new Customer("ID002",
                 "Prakash Rana",
                 "prakash@gmail.com",
                 "Rana",
                 "codemaster",
                 "Kathmandu, Nepal",
                 "27/04/1995", R.drawable.icon_prakash);
-        Customer c3 = new Customer("ABY3",
+        Customer c3 = new Customer("ID003",
                 "Priteshkumar Patel",
                 "pritesh@gmail.com",
                 "TheLion",
                 "codegod",
                 "Gujarat, India",
-                "18/04/1995", R.drawable.icon_pritesh);
-        Customer c4 = new Customer("ABY4",
+                "21/07/1983", R.drawable.icon_pritesh);
+        Customer c4 = new Customer("ID004",
                 "Kritima Kukreja",
                 "kritima@gmail.com",
                 "Kritima",
                 "codepro",
                 "Delhi, India",
-                "01/01/1996", R.drawable.icon_kritima);
-        Customer c5 = new Customer("ABY5",
+                "05/01/1996", R.drawable.icon_kritima);
+        Customer c5 = new Customer("ID005",
                 "Raghav Bobal",
-                "aby@gmail.com",
+                "raghav@gmail.com",
                 "Raghav",
                 "password",
                 "Delhi, India",
-                "18/04/1995",R.drawable.icon_raghav);
+                "27/07/1998",R.drawable.icon_raghav);
         Mobile m1 = new Mobile("MB100",
                 LocalDate.of(2019, 10, 12),
                 Bill.BillType.Mobile,

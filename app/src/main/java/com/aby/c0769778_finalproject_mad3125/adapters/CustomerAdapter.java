@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.CustomerViewHolder> {
@@ -40,6 +42,10 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
         holder.txtName.setText(mCustomers.getName());
         holder.imgCustomerIcon.setImageResource(mCustomers.getCustomerImg());
         holder.txtLocation.setText(mCustomers.getLocation());
+        holder.txtCustomerId.setText(mCustomers.getCustomerId());
+        holder.txtDoB.setText(mCustomers.getDateOfBirth());
+        holder.txtUsername.setText(mCustomers.getUserName());
+        holder.txtEmail.setText(mCustomers.getEmail());
     }
 
     @Override
@@ -51,6 +57,10 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
         TextView txtName;
         ImageView imgCustomerIcon;
         TextView txtLocation;
+        TextView txtCustomerId;
+        TextView txtDoB;
+        TextView txtEmail;
+        TextView txtUsername;
 
         public CustomerViewHolder(@NonNull View itemView)
         {
@@ -58,6 +68,10 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
             imgCustomerIcon = itemView.findViewById(R.id.imgCustomerIcon);
             txtName = itemView.findViewById(R.id.txtName);
             txtLocation = itemView.findViewById(R.id.txtLocation);
+            txtCustomerId = itemView.findViewById(R.id.txtCustomerID);
+            txtDoB = itemView.findViewById(R.id.txtDoB);
+            txtEmail = itemView.findViewById(R.id.txtEmail);
+            txtUsername = itemView.findViewById(R.id.txtUsername);
         }
     }
 }
