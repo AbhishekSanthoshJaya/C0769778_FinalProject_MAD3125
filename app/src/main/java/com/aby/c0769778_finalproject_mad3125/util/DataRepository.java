@@ -11,20 +11,26 @@ import com.aby.c0769778_finalproject_mad3125.model.Mobile;
 
 import org.threeten.bp.LocalDate;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class DataRepository {
-    static private DataRepository repoObj = new DataRepository();
+    private static DataRepository repoObj = new DataRepository();
     private HashMap<String, Customer> customerMap = new HashMap<>();
-
-    private DataRepository()
-    { }
 
     public static DataRepository getInstance() {
         return repoObj;
     }
 
-    private void loadData() {
+    public HashMap getCustomerMap(){
+        return this.customerMap;
+    }
+    private DataRepository()
+    { }
+
+
+    public void loadData() {
         Customer c1 = new Customer("ABY1",
                 "Abhishek",
                 "aby@gmail.com",
@@ -33,6 +39,34 @@ public class DataRepository {
                 "Toronto",
                 "18/04/1995");
         Customer c2 = new Customer("ABY2",
+                "Prakash",
+                "prakash@gmail.com",
+                "Rana",
+                "codemaster",
+                "Toronto",
+                "27/04/1995");
+        Customer c3 = new Customer("ABY3",
+                "Abhishek",
+                "aby@gmail.com",
+                "aby",
+                "aby123",
+                "Toronto",
+                "18/04/1995");
+        Customer c4 = new Customer("ABY4",
+                "Prakash",
+                "prakash@gmail.com",
+                "Rana",
+                "codemaster",
+                "Toronto",
+                "27/04/1995");
+        Customer c5 = new Customer("ABY6",
+                "Abhishek",
+                "aby@gmail.com",
+                "aby",
+                "aby123",
+                "Toronto",
+                "18/04/1995");
+        Customer c6 = new Customer("ABY5",
                 "Prakash",
                 "prakash@gmail.com",
                 "Rana",
@@ -57,14 +91,18 @@ public class DataRepository {
                 Bill.BillType.Internet,
                 "SKYLINK",
                 22.8);
-        c1.addBill("MB100", m1);
-        c1.addBill("HY100", h1);
+//        c1.addBill("MB100", m1);
+////      c1.addBill("HY100", h1);
         customerMap.put(c1.getCustomerId(),c1);
         customerMap.put(c2.getCustomerId(),c2);
+        customerMap.put(c3.getCustomerId(),c3);
+        customerMap.put(c4.getCustomerId(),c4);
+        customerMap.put(c5.getCustomerId(),c5);
+        customerMap.put(c6.getCustomerId(),c6);
     }
 
-    public void makeToast(String message, Context context){
+    public void makeToast(String message, Context context)
+    {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
-
 }

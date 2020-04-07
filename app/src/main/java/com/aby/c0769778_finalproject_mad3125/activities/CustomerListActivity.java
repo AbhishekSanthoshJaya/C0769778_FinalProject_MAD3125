@@ -1,34 +1,47 @@
 package com.aby.c0769778_finalproject_mad3125.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.aby.c0769778_finalproject_mad3125.R;
+import com.aby.c0769778_finalproject_mad3125.adapters.CustomerAdapter;
+import com.aby.c0769778_finalproject_mad3125.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+
 public class CustomerListActivity extends AppCompatActivity {
-    private Button btnLogout;
     private ImageButton imgBtnAddCustomer;
+    private RecyclerView rvCustomerList;
+    private ArrayList customerArrayList;
+    private ArrayList tempCustomerArrayList;
+    private CustomerAdapter customerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_list);
-        btnLogout = findViewById(R.id.btnLogOut);
         imgBtnAddCustomer = findViewById(R.id.imgBtnAddCustomer);
 
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mIntent = new Intent(CustomerListActivity.this, LoginActivity.class);
-                startActivity(mIntent);
-            }
-        });
+        rvCustomerList = findViewById(R.id.rvCustomerList);
+
+        loadCustomers();
+        customerAdapter = new CustomerAdapter(customerArrayList);
+        RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+
+        rvCustomerList.setLayoutManager(mLinearLayoutManager);
+        rvCustomerList.setAdapter(customerAdapter);
+
         imgBtnAddCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,4 +50,19 @@ public class CustomerListActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void loadCustomers()
+    {
+        DataRepository.getInstance().loadData();
+        customerArrayList = new ArrayList();
+        HashMap<String, Customer> customerHashMap = DataRepository.getInstance().getCustomerMap();
+        Collection<Customer> demoValues = customerHashMap.values();
+        tempCustomerArrayList = new ArrayList<>(demoValues);
+        for(int i =0; i<tempCustomerArrayList.size(); i++)
+        {
+            customerArrayList.add(tempCustomerArrayList.get(i));
+        }
+
+    }
+
 }

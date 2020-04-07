@@ -72,31 +72,35 @@ public class LoginActivity extends AppCompatActivity {
         try {
             JSONObject obj = new JSONObject(loadJSONFromAsset("LoginInformation.json"));
             JSONArray userArray = obj.getJSONArray("users");
-            for (int i = 0; i < userArray.length(); i++) {
+            for (int i = 0; i < userArray.length(); i++)
+                {
                 JSONObject userInfo = userArray.getJSONObject(i);
                 emailList.add(userInfo.getString("email"));
                 passwordList.add(userInfo.getString("password"));
-           }
-        }
-        catch (JSONException e)
-        {
-            e.printStackTrace();
-        }
+                }
+            }
+            catch (JSONException e)
+            {
+                e.printStackTrace();
+            }
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(edtEmailIdText.getText().toString().isEmpty()){
-                    edtEmailId.setError("Enter your email address");
+                if(edtEmailIdText.getText().toString().isEmpty())
+                {
+                    edtEmailIdText.setError("Enter your email address");
                 }
 
-                if(edtPasswordText.getText().toString().isEmpty()){
-                    edtPassword.setError("Enter your password");
+                if(edtPasswordText.getText().toString().isEmpty())
+                {
+                    edtPasswordText.setError("Enter your password");
                     return;
                 }
 
-                for(int i=0, j =0; i<emailList.size(); i++,j++){
+                for(int i=0, j =0; i<emailList.size(); i++,j++)
+                {
                     if(emailList.get(i).equals(edtEmailIdText.getText().toString()) && passwordList.get(i).equals(edtPasswordText.getText().toString()))
                     {
                         if(swchRememberMe.isChecked()){

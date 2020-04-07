@@ -33,7 +33,8 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void addBill(String billId, Bill bill){
+    public void addBill(String billId, Bill bill)
+    {
         this.customerBills.put(billId, bill);
     }
 
