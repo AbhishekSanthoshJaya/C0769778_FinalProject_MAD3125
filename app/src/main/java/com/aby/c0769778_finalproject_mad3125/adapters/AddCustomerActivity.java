@@ -89,7 +89,8 @@ public class AddCustomerActivity extends AppCompatActivity {
         }
         if(edtUsernameText.getText().toString().isEmpty())
         {
-            edtUsernameText.setError("Please enter your username");
+            edtUsername.setErrorEnabled(true);
+            edtUsername.setError("Please enter your username");
             someFlag = true;
             return;
         }
@@ -101,6 +102,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         }
         if(edtPasswordText.getText().toString().isEmpty())
         {
+            edtPassword.setErrorEnabled(true);
             edtPassword.setError("Please enter your password");
             someFlag = true;
             return;
