@@ -17,18 +17,18 @@ import java.util.Collection;
 import java.util.HashMap;
 
 public class DataRepository {
-    private static DataRepository repoObj = new DataRepository();
-    private HashMap<String, Customer> customerMap = new HashMap<>();
 
+    private static DataRepository repoObj = new DataRepository();
     public static DataRepository getInstance() {
         return repoObj;
     }
+    private DataRepository()
+    { }
+    private HashMap<String, Customer> customerMap = new HashMap<>();
 
     public HashMap getCustomerMap(){
         return this.customerMap;
     }
-    private DataRepository()
-    { }
 
     public void loadData() {
         Customer c1 = new Customer("ID001",
@@ -66,6 +66,13 @@ public class DataRepository {
                 "password",
                 "Delhi, India",
                 "27/07/1998",R.drawable.icon_raghav);
+        Customer c6 = new Customer("ID006",
+                "Jyothi Thomas",
+                "jyothi@gmail.com",
+                "jyothi",
+                "password2",
+                "Kerala, India",
+                "27/07/1991",R.drawable.woman2);
         Mobile m1 = new Mobile("MB100",
                 LocalDate.of(2019, 10, 12),
                 Bill.BillType.Mobile,
@@ -91,6 +98,7 @@ public class DataRepository {
         customerMap.put(c3.getCustomerId(),c3);
         customerMap.put(c4.getCustomerId(),c4);
         customerMap.put(c5.getCustomerId(),c5);
+        customerMap.put(c6.getCustomerId(),c6);
     }
 
     public void makeToast(String message, Context context)

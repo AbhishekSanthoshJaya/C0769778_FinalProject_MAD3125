@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".adapters.AddCustomerActivity"></activity>
         <activity android:name=".util.SplashScreenActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".activities.CustomerListActivity" />
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".ui.CustomerListActivity" />
+        <activity android:name=".ui.LoginActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

@@ -1,14 +1,11 @@
-package com.aby.c0769778_finalproject_mad3125.activities;
+package com.aby.c0769778_finalproject_mad3125.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.aby.c0769778_finalproject_mad3125.R;
@@ -62,7 +59,5 @@ public class CustomerListActivity extends AppCompatActivity {
         {
             customerArrayList.add(tempCustomerArrayList.get(i));
         }
-
     }
-
 }

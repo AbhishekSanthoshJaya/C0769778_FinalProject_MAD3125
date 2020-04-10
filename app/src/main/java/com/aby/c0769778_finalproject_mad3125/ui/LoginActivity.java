@@ -1,4 +1,4 @@
-package com.aby.c0769778_finalproject_mad3125.activities;
+package com.aby.c0769778_finalproject_mad3125.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

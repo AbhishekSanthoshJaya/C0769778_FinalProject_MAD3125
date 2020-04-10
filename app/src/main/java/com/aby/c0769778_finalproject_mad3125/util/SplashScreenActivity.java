@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.activities.LoginActivity;
+import com.aby.c0769778_finalproject_mad3125.ui.LoginActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
