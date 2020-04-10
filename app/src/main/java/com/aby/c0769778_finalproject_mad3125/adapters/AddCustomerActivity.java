@@ -89,7 +89,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         }
         if(edtUsernameText.getText().toString().isEmpty())
         {
-            edtUsername.setError("Please enter your username");
+            edtUsernameText.setError("Please enter your username");
             someFlag = true;
             return;
         }
@@ -105,8 +105,13 @@ public class AddCustomerActivity extends AppCompatActivity {
             someFlag = true;
             return;
         }
+        if(edtLocationText.getText().toString().isEmpty())
+        {
+            edtLocation.setError("Please enter your location");
+            someFlag = true;
+            return;
+        }
         if(!someFlag) {
-
             Customer customer = new Customer(edtCustomerIdText.getText().toString(),
                     edtFirstNameText.getText().toString(),
                     edtLastNameText.getText().toString(),
@@ -137,5 +142,23 @@ public class AddCustomerActivity extends AppCompatActivity {
             return "Other";
         }
         return null;
+    }
+
+    public void clearfields()
+    {
+        edtUsernameText.getText().clear();
+        edtPasswordText.getText().clear();
+        edtBirthDateText.getText().clear();
+        edtCustomerIdText.getText().clear();
+        edtEmailText.getText().clear();
+        edtLastNameText.getText().clear();
+        edtFirstNameText.getText().clear();
+        edtLocationText.getText().clear();
+
+        rdBtnFemale.setChecked(false);
+        rdBtnMale.setChecked(false);
+        rdBtnOther.setChecked(false);
+
+
     }
 }
