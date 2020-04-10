@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.aby.c0769778_finalproject_mad3125.R;
+import com.aby.c0769778_finalproject_mad3125.adapters.AddCustomerActivity;
 import com.aby.c0769778_finalproject_mad3125.adapters.CustomerAdapter;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
@@ -43,6 +45,8 @@ public class CustomerListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //code to add a customer
+                Intent mIntent = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
+                startActivity(mIntent);
                 DataRepository.getInstance().makeToast("Success", CustomerListActivity.this);
             }
         });
