@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.adapters.AddCustomerActivity;
 import com.aby.c0769778_finalproject_mad3125.adapters.CustomerAdapter;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.util.DataRepository;

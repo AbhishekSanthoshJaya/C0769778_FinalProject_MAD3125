@@ -40,6 +40,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
     public void onBindViewHolder(@NonNull CustomerViewHolder holder, int position) {
         Customer mCustomers = this.customerArrayList.get(position);
         holder.txtName.setText(mCustomers.getFirstName() + " "+ mCustomers.getLastName());
+        holder.txtGenderLetter.setText(mCustomers.getGenderLetter());
         holder.imgCustomerIcon.setImageResource(mCustomers.getCustomerImg());
         holder.txtLocation.setText(mCustomers.getLocation());
         holder.txtCustomerId.setText(mCustomers.getCustomerId());
@@ -61,6 +62,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
         TextView txtDoB;
         TextView txtEmail;
         TextView txtUsername;
+        TextView txtGenderLetter;
 
         public CustomerViewHolder(@NonNull View itemView)
         {
@@ -72,6 +74,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
             txtDoB = itemView.findViewById(R.id.txtDoB);
             txtEmail = itemView.findViewById(R.id.txtEmail);
             txtUsername = itemView.findViewById(R.id.txtUsername);
+            txtGenderLetter = itemView.findViewById(R.id.txtGenderLetter);
         }
     }
 }

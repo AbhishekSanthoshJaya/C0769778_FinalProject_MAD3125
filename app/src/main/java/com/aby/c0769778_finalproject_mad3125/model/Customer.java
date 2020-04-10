@@ -22,6 +22,19 @@ public class Customer implements Parcelable {
     private Double allTotal;
     private int customerImg;
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getGenderLetter()
+    {
+        return getGender().substring(0,1).toUpperCase();
+    }
+
     protected Customer(Parcel in) {
         customerId = in.readString();
         firstName = in.readString();

@@ -1,9 +1,8 @@
-package com.aby.c0769778_finalproject_mad3125.adapters;
+package com.aby.c0769778_finalproject_mad3125.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,9 +14,7 @@ import android.widget.RadioButton;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.ui.CustomerListActivity;
 import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -27,6 +24,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class AddCustomerActivity extends AppCompatActivity {
+
     @BindView(R.id.edtCustomerId) TextInputLayout edtCustomerId;
     @BindView(R.id.edtFirstName) TextInputLayout edtFirstName;
     @BindView(R.id.edtLastName) TextInputLayout edtLastName;
@@ -50,7 +48,6 @@ public class AddCustomerActivity extends AppCompatActivity {
 
     @BindView(R.id.btnAdd) Button btnAdd;
     @BindView(R.id.btnClear) Button btnClear;
-
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
     @Override
