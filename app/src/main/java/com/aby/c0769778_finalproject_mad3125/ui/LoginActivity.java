@@ -47,7 +47,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
         AndroidThreeTen.init(this);
 
         edtEmailIdText = findViewById(R.id.edtEmailIdText);
