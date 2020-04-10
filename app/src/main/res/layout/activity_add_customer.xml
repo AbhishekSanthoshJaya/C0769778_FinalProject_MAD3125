@@ -179,7 +179,6 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_edittext"
                 android:cursorVisible="true"
-                android:focusable="false"
                 android:fontFamily="@font/acme"
                 android:hint="BIRTH DATE"
                 android:textColor="#050000"
