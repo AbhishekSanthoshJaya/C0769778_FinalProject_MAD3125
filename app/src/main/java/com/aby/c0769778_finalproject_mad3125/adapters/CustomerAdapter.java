@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
-
-import org.w3c.dom.Text;
+import com.aby.c0769778_finalproject_mad3125.ui.BillDetailsActivity;
 
 import java.util.ArrayList;
 
@@ -47,6 +47,14 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
         holder.txtDoB.setText(mCustomers.getDateOfBirth());
         holder.txtUsername.setText(mCustomers.getUserName());
         holder.txtEmail.setText(mCustomers.getEmail());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);
+                holder.itemView.getContext().startActivity(mIntent);
+            }
+        });
     }
 
     @Override
