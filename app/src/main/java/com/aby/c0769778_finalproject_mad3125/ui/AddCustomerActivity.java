@@ -220,7 +220,5 @@ public class AddCustomerActivity extends AppCompatActivity {
         rdBtnFemale.setChecked(false);
         rdBtnMale.setChecked(false);
         rdBtnOther.setChecked(false);
-
-
     }
 }

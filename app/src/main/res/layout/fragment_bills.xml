@@ -9,25 +9,35 @@
     tools:context=".ui_fragments.BillsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txtTest"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="550dp"
-        android:text="Bill_details"
-        android:textSize="32sp"
+
+    <ImageView
+        android:id="@+id/imgBillType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="246dp"
+        android:layout_marginBottom="327dp"
+        android:src="@drawable/addcustomericon3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/addcustomericon3"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="188dp" />
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="354dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="358dp"
+        android:text="Bill ID"
+        android:textColor="#072EB1"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgBillType"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,8 +34,6 @@ public class BillsFragment extends Fragment {
     {
         super.onViewCreated(view, savedInstanceState);
 
-        txtText = view.findViewById(R.id.txtTest);
-        txtText.setText("Test Text");
 
 //        MainActivity mMainActivity = (MainActivity) getActivity();
 //        mMainActivity.hello = "Hi From Fragment";

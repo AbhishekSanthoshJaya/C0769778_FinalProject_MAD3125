@@ -28,7 +28,6 @@ import butterknife.ButterKnife;
 
 public class CustomerListActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
     private RecyclerView rvCustomerList;
     private ArrayList customerArrayList;
     private ArrayList tempCustomerArrayList;
