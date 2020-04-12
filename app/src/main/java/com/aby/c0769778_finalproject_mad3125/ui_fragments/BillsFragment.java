@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.ui_fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,11 +14,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
+import com.aby.c0769778_finalproject_mad3125.model.Bill;
+import com.aby.c0769778_finalproject_mad3125.model.Customer;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class BillsFragment extends Fragment {
 
-    private TextView txtText;
+
+    private TextView txtBillId;
     public BillsFragment() {
         // Required empty public constructor
     }
@@ -25,7 +32,13 @@ public class BillsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+        txtBillId = getView().findViewById(R.id.txtBillId);
+        Intent i = getActivity().getIntent();
+
+        Customer customerBills = i.getParcelableExtra("CustomerBills");
+        txtBillId.setText(customerBills.getBills().toString());
+
         return inflater.inflate(R.layout.fragment_bills, container, false);
     }
 

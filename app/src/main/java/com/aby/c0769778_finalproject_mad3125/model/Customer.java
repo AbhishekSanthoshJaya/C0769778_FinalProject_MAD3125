@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Dictionary;
 import java.util.HashMap;
 
@@ -45,6 +46,8 @@ public class Customer implements Parcelable {
         password = in.readString();
         location = in.readString();
         dateOfBirth = in.readString();
+        customerBills = (HashMap<String, Bill>) in.readSerializable();
+
         if (in.readByte() == 0) {
             allTotal = null;
         } else {
@@ -193,6 +196,7 @@ public class Customer implements Parcelable {
         dest.writeString(password);
         dest.writeString(location);
         dest.writeString(dateOfBirth);
+        dest.writeSerializable(this.customerBills);
         if (allTotal == null) {
             dest.writeByte((byte) 0);
         } else {
@@ -200,5 +204,12 @@ public class Customer implements Parcelable {
             dest.writeDouble(allTotal);
         }
         dest.writeInt(customerImg);
+    }
+
+    public ArrayList<Bill> getBills()
+    {
+        Collection<Bill> demoValues = customerBills.values();
+        ArrayList<Bill> billsList = new ArrayList<>(demoValues);
+        return billsList;
     }
 }

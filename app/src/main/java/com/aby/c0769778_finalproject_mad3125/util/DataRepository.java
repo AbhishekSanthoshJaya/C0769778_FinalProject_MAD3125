@@ -12,6 +12,7 @@ import com.aby.c0769778_finalproject_mad3125.model.Mobile;
 
 import org.threeten.bp.LocalDate;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -104,7 +105,7 @@ public class DataRepository {
                 "SKYLINK",
                 22.8);
         c1.addBill("MB100", m1);
-        c1.addBill("HY100", h1);
+        c2.addBill("HY100", h1);
         customerMap.put(c1.getCustomerId(),c1);
         customerMap.put(c2.getCustomerId(),c2);
         customerMap.put(c3.getCustomerId(),c3);
@@ -117,4 +118,5 @@ public class DataRepository {
     {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
+
 }
