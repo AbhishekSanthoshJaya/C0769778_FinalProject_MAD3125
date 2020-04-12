@@ -1,8 +1,8 @@
 package com.aby.c0769778_finalproject_mad3125.ui;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -58,7 +58,9 @@ public class AddCustomerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_customer);
         ButterKnife.bind(this);
 
-        ActionBar mAction = getActionBar(); mAction.hide();
+        ActionBar mActionBar = getSupportActionBar();
+        mActionBar.hide();
+
         addingDatePicker();
 
         btnAdd.setOnClickListener(new View.OnClickListener() {

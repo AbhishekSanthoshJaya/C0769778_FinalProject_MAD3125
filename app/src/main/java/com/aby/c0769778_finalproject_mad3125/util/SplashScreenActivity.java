@@ -1,6 +1,8 @@
 package com.aby.c0769778_finalproject_mad3125.util;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +19,9 @@ public class SplashScreenActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.splashscreen);
 
+            ActionBar mActionBar = getSupportActionBar();
+            mActionBar.hide();
+
             handler=new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
@@ -25,6 +30,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-            },0000);
+            },5000);
         }
 }

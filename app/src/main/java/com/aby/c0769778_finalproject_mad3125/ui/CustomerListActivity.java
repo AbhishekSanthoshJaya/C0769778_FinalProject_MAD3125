@@ -43,7 +43,7 @@ public class CustomerListActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         ActionBar mActionBar = getSupportActionBar();
-       // mActionBar.setTitle("");
+        mActionBar.setTitle("Customer List");
 
         rvCustomerList = findViewById(R.id.rvCustomerList);
 
