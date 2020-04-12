@@ -1,6 +1,7 @@
 package com.aby.c0769778_finalproject_mad3125.adapters;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,10 +62,16 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
 
                 Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);
                 mIntent.putExtra("CustomerBills", customerObj);
-                //holder.itemView.getContext().startActivity(mIntent);
+                holder.itemView.getContext().startActivity(mIntent);
 
+
+                //SERIALIZABLE CODE
 //                Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putSerializable("billsKey", customerObj);
+//                mIntent.putExtras(bundle);
 //                holder.itemView.getContext().startActivity(mIntent);
+
             }
         });
     }

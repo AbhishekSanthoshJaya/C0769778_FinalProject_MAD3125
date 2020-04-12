@@ -2,9 +2,11 @@ package com.aby.c0769778_finalproject_mad3125.model;
 
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class Bill {
+public abstract class Bill implements Serializable {
 
     public enum BillType {
         Mobile,

@@ -3,10 +3,12 @@ package com.aby.c0769778_finalproject_mad3125.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Dictionary;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Customer implements Parcelable {
 
@@ -19,7 +21,7 @@ public class Customer implements Parcelable {
     private String password;
     private String location;
     private String dateOfBirth;
-    private HashMap<String, Bill> customerBills = new HashMap<>();
+    private HashMap<String, Bill> customerBills = new HashMap<String, Bill>();
     private Double allTotal;
     private int customerImg;
 
@@ -46,13 +48,7 @@ public class Customer implements Parcelable {
         password = in.readString();
         location = in.readString();
         dateOfBirth = in.readString();
-        customerBills = (HashMap<String, Bill>) in.readSerializable();
-
-        if (in.readByte() == 0) {
-            allTotal = null;
-        } else {
-            allTotal = in.readDouble();
-        }
+        customerBills = in.readHashMap(Bill.class.getClassLoader());
         customerImg = in.readInt();
     }
 
@@ -196,7 +192,7 @@ public class Customer implements Parcelable {
         dest.writeString(password);
         dest.writeString(location);
         dest.writeString(dateOfBirth);
-        dest.writeSerializable(this.customerBills);
+        dest.writeMap(customerBills);
         if (allTotal == null) {
             dest.writeByte((byte) 0);
         } else {
