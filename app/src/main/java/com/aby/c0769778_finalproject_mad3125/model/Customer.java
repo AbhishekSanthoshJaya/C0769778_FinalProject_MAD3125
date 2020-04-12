@@ -49,6 +49,7 @@ public class Customer implements Parcelable {
         location = in.readString();
         dateOfBirth = in.readString();
         customerBills = in.readHashMap(Bill.class.getClassLoader());
+        allTotal = in.readDouble();
         customerImg = in.readInt();
     }
 
@@ -208,4 +209,15 @@ public class Customer implements Parcelable {
         ArrayList<Bill> billsList = new ArrayList<>(demoValues);
         return billsList;
     }
-}
+
+    public double getTotalAmount()
+    {
+        double allTotal2 = 0.0d;
+        for (Bill b : customerBills.values())
+        {
+            allTotal2 += b.billTotal;
+        }
+        return allTotal2;
+      }
+    }
+

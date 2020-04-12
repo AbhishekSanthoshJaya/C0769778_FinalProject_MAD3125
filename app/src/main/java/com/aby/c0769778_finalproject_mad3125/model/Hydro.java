@@ -1,5 +1,7 @@
 package com.aby.c0769778_finalproject_mad3125.model;
 
+import android.os.Parcel;
+
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 
@@ -43,4 +45,5 @@ public class Hydro extends Bill {
     public void setUnitsUsed(Integer unitsUsed) {
         this.unitsUsed = unitsUsed;
     }
+
 }

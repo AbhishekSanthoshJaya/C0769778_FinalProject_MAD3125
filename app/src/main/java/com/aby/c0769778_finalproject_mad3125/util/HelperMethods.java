@@ -23,7 +23,7 @@ public class HelperMethods {
 
     public String doubleFormatter(Double d)
     {
-        return String.format("$" + "%,.2f", d);
+        return String.format("$ " + "%,.2f", d);
     }
 
 }

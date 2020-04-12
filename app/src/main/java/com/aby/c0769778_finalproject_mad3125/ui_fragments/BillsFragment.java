@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.ui_fragments;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -7,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
 import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 
 import java.util.ArrayList;
@@ -29,7 +32,7 @@ public class BillsFragment extends Fragment {
     private TextView txtBillDate;
     private TextView txtBillAmount;
     private ImageView imgBillType;
-
+    double totalAmount;
 
     public BillsFragment() {
         // Required empty public constructor
@@ -39,6 +42,7 @@ public class BillsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_bills, container, false);
+
     }
 
     @Override
@@ -48,7 +52,6 @@ public class BillsFragment extends Fragment {
         txtBillId = getView().findViewById(R.id.txtBillId);
         txtBillDate = getView().findViewById(R.id.txtBillDate);
         txtBillAmount = getView().findViewById(R.id.txtBillAmount);
-
         imgBillType = getView().findViewById(R.id.imgBillType);
 
         Intent mIntent = getActivity().getIntent();
@@ -56,6 +59,12 @@ public class BillsFragment extends Fragment {
 
         // cust = (Customer) getActivity().getIntent().getExtras().getSerializable("billsKey");
         ArrayList<Bill> bills = customerObj.getBills();
+        for(int j = 0; j< bills.size(); j++)
+        {
+            totalAmount += bills.get(j).getBillTotal();
+        }
+
+       // Log.d("Tag", String.valueOf(totalAmount));
 
         for(int i =0; i <bills.size(); i++)
         {
@@ -82,9 +91,7 @@ public class BillsFragment extends Fragment {
                 txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
                 txtBillDate.setText(bills.get(i).getBillDate().toString());
             }
-
         }
-
 //        MainActivity mMainActivity = (MainActivity) getActivity();
 //        mMainActivity.hello = "Hi From Fragment";
 

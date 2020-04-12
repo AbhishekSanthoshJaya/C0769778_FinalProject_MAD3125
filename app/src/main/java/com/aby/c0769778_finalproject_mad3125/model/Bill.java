@@ -1,5 +1,7 @@
 package com.aby.c0769778_finalproject_mad3125.model;
 
+import android.os.Parcelable;
+
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 
@@ -16,7 +18,7 @@ public abstract class Bill implements Serializable {
      String billId;
      LocalDate billDate;
      BillType billType;
-     Double billTotal;
+     Double billTotal = 0.0;
 
     Bill(String billId, LocalDate billDate, BillType billType)
         {

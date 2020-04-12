@@ -5,20 +5,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
+import com.aby.c0769778_finalproject_mad3125.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.ui_fragments.BillsFragment;
+import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 
 public class BillDetailsActivity extends AppCompatActivity {
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
+    private TextView txtTotalAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_details);
+
+        Intent mIntent = getIntent();
+        Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
+
+        txtTotalAmount = findViewById(R.id.txtTotalAmount);
+        txtTotalAmount.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();

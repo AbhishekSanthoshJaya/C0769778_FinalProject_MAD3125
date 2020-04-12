@@ -23,8 +23,7 @@ public class DataRepository {
     public static DataRepository getInstance() {
         return repoObj;
     }
-    private DataRepository()
-    { }
+    private DataRepository() { }
     private HashMap<String, Customer> customerMap = new HashMap<>();
 
     public HashMap getCustomerMap(){
@@ -105,7 +104,7 @@ public class DataRepository {
                 "SKYLINK",
                 22.8);
         c1.addBill("MB100", m1);
-        c2.addBill("HY100", h1);
+        c1.addBill("HY100", h1);
         customerMap.put(c1.getCustomerId(),c1);
         customerMap.put(c2.getCustomerId(),c2);
         customerMap.put(c3.getCustomerId(),c3);
