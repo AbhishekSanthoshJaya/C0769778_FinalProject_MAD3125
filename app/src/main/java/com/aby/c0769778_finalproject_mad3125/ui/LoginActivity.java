@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.ui;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
@@ -26,6 +27,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+import butterknife.Action;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
@@ -48,6 +50,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AndroidThreeTen.init(this);
+
+        ActionBar mActionBar = getSupportActionBar();
+        mActionBar.hide();
 
         edtEmailIdText = findViewById(R.id.edtEmailIdText);
         edtPasswordText = findViewById(R.id.edtPasswordText);

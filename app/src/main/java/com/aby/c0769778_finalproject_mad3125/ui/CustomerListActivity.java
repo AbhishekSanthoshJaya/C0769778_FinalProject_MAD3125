@@ -1,13 +1,18 @@
 package com.aby.c0769778_finalproject_mad3125.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.adapters.CustomerAdapter;
@@ -18,18 +23,27 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class CustomerListActivity extends AppCompatActivity {
-    private ImageButton imgBtnAddCustomer;
+
+    Toolbar toolbar;
     private RecyclerView rvCustomerList;
     private ArrayList customerArrayList;
     private ArrayList tempCustomerArrayList;
     private CustomerAdapter customerAdapter;
 
+    @BindView(R.id.imgBtnAddCustomer) ImageButton ImgBtnAddCustomer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_list);
-        imgBtnAddCustomer = findViewById(R.id.imgBtnAddCustomer);
+        ButterKnife.bind(this);
+
+        ActionBar mActionBar = getSupportActionBar();
+       // mActionBar.setTitle("");
 
         rvCustomerList = findViewById(R.id.rvCustomerList);
 
@@ -40,15 +54,31 @@ public class CustomerListActivity extends AppCompatActivity {
         rvCustomerList.setLayoutManager(mLinearLayoutManager);
         rvCustomerList.setAdapter(customerAdapter);
 
-        imgBtnAddCustomer.setOnClickListener(new View.OnClickListener() {
+        ImgBtnAddCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //code to add a customer
                 Intent mIntent = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
                 startActivity(mIntent);
-                DataRepository.getInstance().makeToast("Success", CustomerListActivity.this);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_customerlist, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mnuAddCustomer:
+                Intent mIntent = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
+                startActivity(mIntent);
+            case R.id.mnuLogout:
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void loadCustomers()

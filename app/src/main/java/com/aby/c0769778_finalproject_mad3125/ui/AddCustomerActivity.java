@@ -2,6 +2,7 @@ package com.aby.c0769778_finalproject_mad3125.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,6 +21,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Calendar;
 
+import butterknife.Action;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -56,6 +58,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_customer);
         ButterKnife.bind(this);
 
+        ActionBar mAction = getActionBar(); mAction.hide();
         addingDatePicker();
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
