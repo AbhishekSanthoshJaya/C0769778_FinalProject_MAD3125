@@ -4,6 +4,8 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.text.NumberFormat;
+
 public class HelperMethods {
 
     private static HelperMethods repoObj = new HelperMethods();
@@ -21,6 +23,7 @@ public class HelperMethods {
 
     public String doubleFormatter(Double d)
     {
-        return String.format("%.2f", d);
+        return String.format("$" + "%,.2f", d);
     }
+
 }

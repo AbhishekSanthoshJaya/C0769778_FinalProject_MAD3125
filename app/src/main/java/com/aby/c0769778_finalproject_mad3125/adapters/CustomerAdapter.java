@@ -65,7 +65,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
                 holder.itemView.getContext().startActivity(mIntent);
 
 
-                //SERIALIZABLE CODE
+                  //SERIALIZABLE CODE
 //                Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);
 //                Bundle bundle = new Bundle();
 //                bundle.putSerializable("billsKey", customerObj);
