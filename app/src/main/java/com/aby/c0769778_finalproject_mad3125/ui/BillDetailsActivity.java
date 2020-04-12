@@ -38,5 +38,9 @@ public class BillDetailsActivity extends AppCompatActivity {
         mFragmentTransaction = mFragmentManager.beginTransaction();
         mFragmentTransaction.add(R.id.container, new BillsFragment());
         mFragmentTransaction.commit();
+
+        mFragmentTransaction = mFragmentManager.beginTransaction();
+        mFragmentTransaction.add(R.id.container2, new BillsFragment());
+        mFragmentTransaction.commit();
     }
 }
