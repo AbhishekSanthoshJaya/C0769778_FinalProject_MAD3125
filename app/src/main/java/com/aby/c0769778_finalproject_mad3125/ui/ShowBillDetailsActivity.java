@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 
 import java.util.ArrayList;
 
-public class BillDetailsActivity extends AppCompatActivity {
+public class ShowBillDetailsActivity extends AppCompatActivity {
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
@@ -39,6 +40,14 @@ public class BillDetailsActivity extends AppCompatActivity {
         txtTotalAmount = findViewById(R.id.txtTotalAmount);
         imgAddButton = findViewById(R.id.imgAddBill);
         imgAddButton.setImageResource(R.drawable.addbillsicon);
+
+        imgAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(ShowBillDetailsActivity.this, AddNewBillActivity.class);
+                startActivity(mIntent);
+            }
+        });
 
         txtTotalAmount.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 

@@ -1,24 +1,18 @@
 package com.aby.c0769778_finalproject_mad3125.adapters;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.ui.AddCustomerActivity;
-import com.aby.c0769778_finalproject_mad3125.ui.BillDetailsActivity;
-import com.aby.c0769778_finalproject_mad3125.ui.CustomerListActivity;
-import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
+import com.aby.c0769778_finalproject_mad3125.ui.ShowBillDetailsActivity;
 
 import java.util.ArrayList;
 
@@ -58,7 +52,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
             @Override
             public void onClick(View v) {
                 Customer customerObj = customerArrayList.get(position);
-                Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);
+                Intent mIntent = new Intent(holder.itemView.getContext(), ShowBillDetailsActivity.class);
                 mIntent.putExtra("CustomerBills", customerObj);
                 holder.itemView.getContext().startActivity(mIntent);
 

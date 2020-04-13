@@ -1,4 +1,4 @@
-package com.aby.c0769778_finalproject_mad3125.util;
+package com.aby.c0769778_finalproject_mad3125.ui;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.ui.LoginActivity;
 
-public class SplashScreenActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
          Handler handler;
         @Override
@@ -26,7 +25,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent=new Intent(SplashScreenActivity.this, LoginActivity.class);
+                    Intent intent=new Intent(SplashActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }

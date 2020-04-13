@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.BillDetailsActivity"></activity>
+        <activity android:name=".ui.AddNewBillActivity"></activity>
+        <activity android:name=".ui.ShowBillDetailsActivity" />
         <activity android:name=".ui.AddCustomerActivity" />
-        <activity android:name=".util.SplashScreenActivity">
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
