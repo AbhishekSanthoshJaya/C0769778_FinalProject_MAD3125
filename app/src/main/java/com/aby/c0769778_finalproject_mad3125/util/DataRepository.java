@@ -115,10 +115,4 @@ public class DataRepository {
         customerMap.put(c5.getCustomerId(),c5);
         customerMap.put(c6.getCustomerId(),c6);
     }
-
-    public void makeToast(String message, Context context)
-    {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
-    }
-
 }

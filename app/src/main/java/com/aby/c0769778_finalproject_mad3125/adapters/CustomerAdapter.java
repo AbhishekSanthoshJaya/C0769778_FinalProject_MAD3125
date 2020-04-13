@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.ui.AddNewBillActivity;
 import com.aby.c0769778_finalproject_mad3125.ui.ShowBillDetailsActivity;
 
 import java.util.ArrayList;
@@ -62,7 +63,6 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
 //                bundle.putSerializable("billsKey", customerObj);
 //                mIntent.putExtras(bundle);
 //                holder.itemView.getContext().startActivity(mIntent);
-
             }
         });
     }

@@ -121,6 +121,7 @@ public class AddCustomerActivity extends AppCompatActivity {
         String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
         return monthNames[monthNumber-1];
     }
+
     public void fieldChecker()
     {
         boolean someFlag = false;

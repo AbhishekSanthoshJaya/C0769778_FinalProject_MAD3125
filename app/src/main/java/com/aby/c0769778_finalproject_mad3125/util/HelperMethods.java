@@ -1,10 +1,11 @@
 package com.aby.c0769778_finalproject_mad3125.util;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
-import java.text.NumberFormat;
 
 public class HelperMethods {
 
@@ -26,4 +27,8 @@ public class HelperMethods {
         return String.format("$ " + "%,.2f", d);
     }
 
+    public void makeToast(String message, Context context)
+    {
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
 }
