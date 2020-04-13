@@ -10,11 +10,13 @@ import com.aby.c0769778_finalproject_mad3125.model.Hydro;
 import com.aby.c0769778_finalproject_mad3125.model.Internet;
 import com.aby.c0769778_finalproject_mad3125.model.Mobile;
 
+import org.joda.time.DateTime;
 import org.threeten.bp.LocalDate;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 
 public class DataRepository {
@@ -86,7 +88,7 @@ public class DataRepository {
                 "Kerala, India",
                 "27/07/1991",R.drawable.woman2);
         Mobile m1 = new Mobile("MB100",
-                LocalDate.of(2019, 10, 12),
+                org.joda.time.LocalDate.now(),
                 Bill.BillType.Mobile,
                 "APPLE INC.",
                 "Student Plan",
@@ -94,12 +96,12 @@ public class DataRepository {
                 1,
                 6);
         Hydro h1 = new Hydro( "HY100",
-                LocalDate.of(2019, 10, 12),
+                org.joda.time.LocalDate.now(),
                 Bill.BillType.Hydro,
                 "PUREWATA",
                 22);
         Internet in1 = new Internet("IN100",
-                LocalDate.of(2019, 10, 12),
+                org.joda.time.LocalDate.now(),
                 Bill.BillType.Internet,
                 "SKYLINK",
                 22.8);

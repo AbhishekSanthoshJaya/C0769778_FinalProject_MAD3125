@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.model.Mobile;
+import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
 import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -68,6 +70,13 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         spnBillType.setAdapter(dataAdapter);
 
         spnBillType.setOnItemSelectedListener(this);
+
+        btnBillClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearfields();
+            }
+        });
     }
 
     @Override
@@ -75,6 +84,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         if(position == 0)
         {
             initFields();
+            clearfields();
             edtUnitsUsed.setVisibility(View.INVISIBLE);
             edtAgencyName.setVisibility(View.INVISIBLE);
             btnBillAdd.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +98,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             edtNumberText.getText().toString(),
                             Integer.parseInt(edtDataUsedText.getText().toString()),
                             Integer.parseInt(edtMinsUsedText.getText().toString()));
+                DataRepository.getInstance().makeToast(mObj.toString(), AddNewBillActivity.this);
                 }
             });
 
@@ -95,6 +106,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         if(position == 1)
         {
             hidefields();
+            clearfields();
             edtUnitsUsed.setVisibility(View.VISIBLE);
             edtAgencyName.setVisibility(View.VISIBLE);
         }
@@ -102,6 +114,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         if(position == 2)
         {
             hidefields();
+            clearfields();
             edtUnitsUsed.setVisibility(View.VISIBLE);
             edtAgencyName.setVisibility(View.VISIBLE);
             edtAgencyName.setHint("ENTER PROVIDER NAME");
@@ -138,7 +151,6 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
 
     public void clearfields()
     {
-        edtMinsUsedText.getText().clear();
         edtNumberText.getText().clear();
         edtDataUsedText.getText().clear();
         edtMinsUsedText.getText().clear();
@@ -146,6 +158,8 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         edtManufacNameText.getText().clear();
         edtBillDateText.getText().clear();
         edtBillIdText.getText().clear();
+        edtAgencyNameText.getText().clear();
+        edtDataUsedText.getText().clear();
     }
 
 }
