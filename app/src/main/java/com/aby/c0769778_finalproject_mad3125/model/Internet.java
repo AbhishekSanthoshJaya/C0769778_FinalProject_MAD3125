@@ -1,7 +1,7 @@
 package com.aby.c0769778_finalproject_mad3125.model;
 
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
+
+import org.joda.time.LocalDate;
 
 public class Internet extends Bill {
     private String providerName;

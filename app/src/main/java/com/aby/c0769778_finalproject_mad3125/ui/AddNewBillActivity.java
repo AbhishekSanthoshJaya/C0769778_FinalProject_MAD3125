@@ -8,11 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
+import com.aby.c0769778_finalproject_mad3125.model.Bill;
+import com.aby.c0769778_finalproject_mad3125.model.Mobile;
+import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -36,12 +40,15 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
     @BindView(R.id.edtMinsUsed) TextInputLayout edtMinsUsed;
     @BindView(R.id.edtMinsUsedText) TextInputEditText edtMinsUsedText;
     @BindView(R.id.edtManufacName) TextInputLayout edtManufacName;
+    @BindView(R.id.edtManufacNameText) TextInputEditText edtManufacNameText;
     @BindView(R.id.edtPlanName) TextInputLayout edtPlanName;
     @BindView(R.id.edtPlanNameText) TextInputEditText edtPlanNameText;
     @BindView(R.id.edtUnitsUsed) TextInputLayout edtUnitsUsed;
     @BindView(R.id.edtUnitsUsedText) TextInputEditText edtUnitsUsedText;
     @BindView(R.id.edtAgencyName) TextInputLayout edtAgencyName;
     @BindView(R.id.edtAgencyNameText) TextInputEditText edtAgencyNameText;
+    @BindView(R.id.btnBillAdd) Button  btnBillAdd;
+    @BindView(R.id.btnBillClear) Button btnBillClear;
 
 
     @Override
@@ -70,6 +77,20 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
             initFields();
             edtUnitsUsed.setVisibility(View.INVISIBLE);
             edtAgencyName.setVisibility(View.INVISIBLE);
+            btnBillAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Mobile mObj = new Mobile   (edtBillIdText.getText().toString(),
+                            HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
+                            Bill.BillType.Mobile,
+                            edtManufacNameText.getText().toString(),
+                            edtPlanNameText.getText().toString(),
+                            edtNumberText.getText().toString(),
+                            Integer.parseInt(edtDataUsedText.getText().toString()),
+                            Integer.parseInt(edtMinsUsedText.getText().toString()));
+                }
+            });
+
         }
         if(position == 1)
         {
@@ -114,4 +135,17 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         edtPlanName.setVisibility(View.INVISIBLE);
         edtManufacName.setVisibility(View.INVISIBLE);
     }
+
+    public void clearfields()
+    {
+        edtMinsUsedText.getText().clear();
+        edtNumberText.getText().clear();
+        edtDataUsedText.getText().clear();
+        edtMinsUsedText.getText().clear();
+        edtPlanNameText.getText().clear();
+        edtManufacNameText.getText().clear();
+        edtBillDateText.getText().clear();
+        edtBillIdText.getText().clear();
+    }
+
 }

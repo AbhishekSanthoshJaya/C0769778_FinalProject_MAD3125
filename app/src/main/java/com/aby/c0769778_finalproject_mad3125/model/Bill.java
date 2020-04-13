@@ -2,8 +2,8 @@ package com.aby.c0769778_finalproject_mad3125.model;
 
 import android.os.Parcelable;
 
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
+
+import org.joda.time.LocalDate;
 
 import java.io.Serializable;
 import java.util.Date;

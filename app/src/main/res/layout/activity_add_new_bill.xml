@@ -389,7 +389,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnAdd"
+            android:id="@+id/btnBillAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="85dp"
@@ -408,7 +408,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edtLocation" />
 
         <Button
-            android:id="@+id/btnClear"
+            android:id="@+id/btnBillClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="26dp"
