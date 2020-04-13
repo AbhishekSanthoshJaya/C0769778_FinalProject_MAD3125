@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
@@ -22,6 +24,7 @@ public class BillDetailsActivity extends AppCompatActivity {
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
     private TextView txtTotalAmount;
+    private ImageView imgAddButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,9 @@ public class BillDetailsActivity extends AppCompatActivity {
         ArrayList<Bill> bills = customerObj.getBills();
 
         txtTotalAmount = findViewById(R.id.txtTotalAmount);
+        imgAddButton = findViewById(R.id.imgAddBill);
+        imgAddButton.setImageResource(R.drawable.addbillsicon);
+
         txtTotalAmount.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 
         ActionBar mActionBar = getSupportActionBar();
