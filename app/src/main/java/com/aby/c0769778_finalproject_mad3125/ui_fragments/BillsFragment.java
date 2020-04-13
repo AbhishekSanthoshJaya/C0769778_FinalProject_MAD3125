@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -34,6 +36,9 @@ public class BillsFragment extends Fragment {
     private ImageView imgBillType;
     double totalAmount;
 
+    FragmentManager mFragmentManager;
+    FragmentTransaction mFragmentTransaction;
+
     public BillsFragment() {
         // Required empty public constructor
     }
@@ -41,6 +46,7 @@ public class BillsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         return inflater.inflate(R.layout.fragment_bills, container, false);
 
     }
@@ -87,7 +93,7 @@ public class BillsFragment extends Fragment {
             if(bills.get(i).getBillId().contains("IN"))
             {
                 txtBillId.setText(bills.get(i).getBillId());
-                imgBillType.setImageResource(R.drawable.mobileicon);
+                imgBillType.setImageResource(R.drawable.interneticon);
                 txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
                 txtBillDate.setText(bills.get(i).getBillDate().toString());
             }

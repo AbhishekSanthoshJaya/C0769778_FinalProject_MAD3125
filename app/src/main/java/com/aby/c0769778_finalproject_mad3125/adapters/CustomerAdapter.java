@@ -58,12 +58,9 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
             @Override
             public void onClick(View v) {
                 Customer customerObj = customerArrayList.get(position);
-                DataRepository.getInstance().makeToast(customerObj.getBills().toString(), holder.itemView.getContext());
-
                 Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);
                 mIntent.putExtra("CustomerBills", customerObj);
                 holder.itemView.getContext().startActivity(mIntent);
-
 
                   //SERIALIZABLE CODE
 //                Intent mIntent = new Intent(holder.itemView.getContext(), BillDetailsActivity.class);

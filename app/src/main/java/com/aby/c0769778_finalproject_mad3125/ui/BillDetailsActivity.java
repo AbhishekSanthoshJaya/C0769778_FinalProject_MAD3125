@@ -10,9 +10,12 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
+import com.aby.c0769778_finalproject_mad3125.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.ui_fragments.BillsFragment;
 import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
+
+import java.util.ArrayList;
 
 public class BillDetailsActivity extends AppCompatActivity {
 
@@ -28,6 +31,8 @@ public class BillDetailsActivity extends AppCompatActivity {
         Intent mIntent = getIntent();
         Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
 
+        ArrayList<Bill> bills = customerObj.getBills();
+
         txtTotalAmount = findViewById(R.id.txtTotalAmount);
         txtTotalAmount.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 
@@ -39,8 +44,8 @@ public class BillDetailsActivity extends AppCompatActivity {
         mFragmentTransaction.add(R.id.container, new BillsFragment());
         mFragmentTransaction.commit();
 
-        mFragmentTransaction = mFragmentManager.beginTransaction();
-        mFragmentTransaction.add(R.id.container2, new BillsFragment());
-        mFragmentTransaction.commit();
+//        mFragmentTransaction = mFragmentManager.beginTransaction();
+//        mFragmentTransaction.add(R.id.container2, new BillsFragment());
+//        mFragmentTransaction.commit();
     }
 }

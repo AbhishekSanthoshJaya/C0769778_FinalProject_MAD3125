@@ -103,6 +103,7 @@ public class DataRepository {
                 Bill.BillType.Internet,
                 "SKYLINK",
                 22.8);
+        c2.addBill("IN100", in1);
         c1.addBill("MB100", m1);
         c1.addBill("HY100", h1);
         customerMap.put(c1.getCustomerId(),c1);
