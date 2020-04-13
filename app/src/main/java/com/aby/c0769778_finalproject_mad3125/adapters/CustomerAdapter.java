@@ -14,6 +14,7 @@ import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.ui.AddNewBillActivity;
 import com.aby.c0769778_finalproject_mad3125.ui.ShowBillDetailsActivity;
+import com.aby.c0769778_finalproject_mad3125.ui.ShowBillDetailsActivity2;
 
 import java.util.ArrayList;
 
@@ -53,7 +54,11 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
             @Override
             public void onClick(View v) {
                 Customer customerObj = customerArrayList.get(position);
-                Intent mIntent = new Intent(holder.itemView.getContext(), ShowBillDetailsActivity.class);
+//                Intent mIntent = new Intent(holder.itemView.getContext(), ShowBillDetailsActivity.class);
+//                mIntent.putExtra("CustomerBills", customerObj);
+//                holder.itemView.getContext().startActivity(mIntent);
+
+                Intent mIntent = new Intent(holder.itemView.getContext(), ShowBillDetailsActivity2.class);
                 mIntent.putExtra("CustomerBills", customerObj);
                 holder.itemView.getContext().startActivity(mIntent);
 
