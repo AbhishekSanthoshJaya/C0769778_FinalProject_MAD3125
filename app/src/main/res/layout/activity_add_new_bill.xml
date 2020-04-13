@@ -12,15 +12,37 @@
         android:layout_height="match_parent"
         tools:context=".ui.PersonInformationEntryActivity">
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/t2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="908dp"
+            android:background="@drawable/rounded_edittext"
+            android:backgroundTint="#1FCDF0"
+            android:fontFamily="@font/acme"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:shadowColor="#0E0000"
+            android:text="SELECT BILL TYPE"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtFirstName"
+            android:id="@+id/edtNumber"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="387dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="460dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="716dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColorHint="#000000"
@@ -31,7 +53,6 @@
             app:errorIconTintMode="src_atop"
             app:errorTextColor="#10FDF9"
             app:hintTextColor="#020000"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,13 +60,13 @@
             app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtFirstNameText"
+                android:id="@+id/edtNumberText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_edittext"
                 android:cursorVisible="true"
                 android:fontFamily="@font/acme"
-                android:hint="MANUFACTURER NAME"
+                android:hint="ENTER PHONE NUMBER"
                 android:textColor="#050000"
                 android:textColorHint="#050000"
                 android:textSize="18sp" />
@@ -115,9 +136,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="412dp"
+            android:layout_marginTop="390dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="571dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColorHint="#000000"
@@ -128,7 +148,6 @@
             app:errorTextAppearance="@style/TextAppearance.AppCompat.Small"
             app:errorTextColor="#10FDF9"
             app:hintTextColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -150,14 +169,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtUsername"
+            android:id="@+id/edtDataUsed"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="528dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="414dp"
             android:ems="10"
             android:inputType="none"
             android:textColorHint="#000000"
@@ -167,7 +185,6 @@
             app:errorEnabled="false"
             app:errorTextColor="#10FDF9"
             app:hintTextColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -175,27 +192,26 @@
             app:startIconDrawable="@android:drawable/ic_menu_edit">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtUsernameText"
+                android:id="@+id/edtDataUsedText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_edittext"
                 android:cursorVisible="true"
                 android:fontFamily="@font/acme"
-                android:hint="ENTER USERNAME"
+                android:hint="ENTER DATA USED "
                 android:textColor="#050000"
                 android:textColorHint="#050000"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtMinsUsed"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="680dp"
+            android:layout_marginTop="590dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="373dp"
             android:ems="10"
             android:inputType="none|textEmailAddress"
             android:textColorHint="#000000"
@@ -205,7 +221,6 @@
             app:errorEnabled="false"
             app:errorTextColor="#10FDF9"
             app:hintTextColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -213,27 +228,27 @@
             app:startIconDrawable="@android:drawable/sym_action_email">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtEmailText"
+                android:id="@+id/edtMinsUsedText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_edittext"
                 android:cursorVisible="true"
                 android:fontFamily="@font/acme"
-                android:hint="ENTER YOUR EMAIL"
+                android:hint="ENTER MINUTES USED"
                 android:textColor="#050000"
                 android:textColorHint="#050000"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtPassword"
+            android:id="@+id/edtManufacName"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="770dp"
+            android:layout_marginTop="655dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="315dp"
+            android:layout_marginBottom="474dp"
             android:ems="10"
             android:inputType="none|textPassword"
             android:textColorHint="#000000"
@@ -251,27 +266,26 @@
             app:startIconDrawable="@android:drawable/ic_menu_view">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtPasswordText"
+                android:id="@+id/edtManufacNameText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_edittext"
                 android:cursorVisible="true"
                 android:fontFamily="@font/acme"
-                android:hint="ENTER PASSWORD"
+                android:hint="ENTER MANUFACTURER NAME"
                 android:textColor="#050000"
                 android:textColorHint="#050000"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtLocation"
+            android:id="@+id/edtPlanName"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="860dp"
+            android:layout_marginTop="718dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="256dp"
             android:ems="10"
             android:inputType="textPersonName|text"
             android:textColorHint="#000000"
@@ -281,20 +295,19 @@
             app:errorEnabled="false"
             app:errorTextColor="#10FDF9"
             app:hintTextColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:startIconDrawable="@android:drawable/ic_menu_myplaces">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtLocationText"
+                android:id="@+id/edtPlanNameText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/rounded_edittext"
                 android:cursorVisible="true"
                 android:fontFamily="@font/acme"
-                android:hint="ENTER YOUR LOCATION"
+                android:hint="ENTER YOUR PLAN NAME"
                 android:textColor="#050000"
                 android:textColorHint="#050000"
                 android:textSize="18sp" />
@@ -355,15 +368,17 @@
             android:id="@+id/spnBillType"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="160dp"
+            android:layout_marginStart="165dp"
             android:layout_marginTop="240dp"
             android:layout_marginEnd="12dp"
-            android:layout_marginBottom="890dp"
+            android:layout_marginBottom="900dp"
             android:background="@drawable/rounded_edittext"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
