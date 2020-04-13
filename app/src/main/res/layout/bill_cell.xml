@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imgCellBillType"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,7 @@
         android:id="@+id/txtCellBillId"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="166dp"
+        android:layout_marginStart="170dp"
         android:layout_marginEnd="168dp"
         android:layout_marginBottom="108dp"
         android:fontFamily="@font/acme"
@@ -40,21 +40,26 @@
         android:id="@+id/txtCellBillDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="160dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="76dp"
         android:fontFamily="@font/acme"
         android:text="BILL DATE"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtCellBillType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="150dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="48dp"
         android:fontFamily="@font/acme"
         android:text="BILL TYPE"
@@ -62,14 +67,17 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgCellBillType" />
+        app:layout_constraintStart_toEndOf="@+id/imgCellBillType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtCellBillAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="128dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/acme"
         android:text="BILL AMOUNT"
@@ -77,6 +85,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
