@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.adapters.BillsAdapter;
 import com.aby.c0769778_finalproject_mad3125.adapters.CustomerAdapter;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 
 import java.util.ArrayList;
 
@@ -24,6 +26,7 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
     private ArrayList billsArrayList;
     private BillsAdapter billsAdapter;
     private ImageView imgAddButton;
+    private TextView txtTotalAmountValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,9 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
         Intent mIntent = getIntent();
         Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
         billsArrayList = customerObj.getBills();
+
+        txtTotalAmountValue = findViewById(R.id.txtTotalAmountValue);
+        txtTotalAmountValue.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 
         rvBillsList = findViewById(R.id.rvBillsList);
         billsAdapter = new BillsAdapter(billsArrayList);

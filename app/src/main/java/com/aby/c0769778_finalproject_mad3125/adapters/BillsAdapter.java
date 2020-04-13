@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
 
 import org.w3c.dom.Text;
 
@@ -51,7 +52,7 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
             holder.imgCellBillType.setImageResource(R.drawable.interneticon);
         }
         holder.txtCellBillId.setText(mBills.getBillId());
-        holder.txtCellBillAmount.setText(mBills.getBillTotal().toString());
+        holder.txtCellBillAmount.setText(HelperMethods.getInstance().doubleFormatter(mBills.getBillTotal()));
         holder.txtCellBillDate.setText(mBills.getBillDate().toString());
         holder.txtCellBillType.setText(mBills.getBillType().toString());
     }
