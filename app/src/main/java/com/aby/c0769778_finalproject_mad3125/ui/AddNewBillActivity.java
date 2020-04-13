@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.model.Hydro;
+import com.aby.c0769778_finalproject_mad3125.model.Internet;
 import com.aby.c0769778_finalproject_mad3125.model.Mobile;
 import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
 import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
@@ -120,6 +122,19 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
             clearfields();
             edtUnitsUsed.setVisibility(View.VISIBLE);
             edtAgencyName.setVisibility(View.VISIBLE);
+            edtAgencyName.setHint("ENTER AGENCY NAME");
+            edtUnitsUsed.setHint("ENTER UNITS USED");
+            btnBillAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Hydro hObj = new Hydro   (edtBillIdText.getText().toString(),
+                            HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
+                            Bill.BillType.Hydro,
+                            edtAgencyNameText.getText().toString(),
+                            Integer.parseInt(edtUnitsUsedText.getText().toString()));
+                    HelperMethods.getInstance().makeToast(hObj.getAgencyName(), AddNewBillActivity.this);
+                }
+            });
         }
 
         if(position == 2)
@@ -130,12 +145,22 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
             edtAgencyName.setVisibility(View.VISIBLE);
             edtAgencyName.setHint("ENTER PROVIDER NAME");
             edtUnitsUsed.setHint("ENTER DATA USED");
+            btnBillAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Internet iObj = new Internet   (edtBillIdText.getText().toString(),
+                            HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
+                            Bill.BillType.Hydro,
+                            edtAgencyNameText.getText().toString(),
+                            Double.parseDouble(edtUnitsUsedText.getText().toString()));
+                    HelperMethods.getInstance().makeToast(iObj.getProviderName(), AddNewBillActivity.this);
+                }
+            });
         }
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
     }
 
     private void addingDatePicker()
@@ -211,5 +236,6 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         edtBillIdText.getText().clear();
         edtAgencyNameText.getText().clear();
         edtDataUsedText.getText().clear();
+        edtUnitsUsedText.getText().clear();
     }
 }
