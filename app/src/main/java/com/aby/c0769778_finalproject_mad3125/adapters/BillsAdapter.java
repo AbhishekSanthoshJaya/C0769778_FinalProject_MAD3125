@@ -60,7 +60,6 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
     public int getItemCount() {
         return this.billArrayList.size();
     }
-
     public class BillsViewHolder extends RecyclerView.ViewHolder
     {
         TextView txtCellBillId;
