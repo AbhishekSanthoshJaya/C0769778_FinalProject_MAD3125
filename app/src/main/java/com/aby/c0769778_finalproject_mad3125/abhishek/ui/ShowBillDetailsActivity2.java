@@ -66,6 +66,7 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_customerlist, menu);

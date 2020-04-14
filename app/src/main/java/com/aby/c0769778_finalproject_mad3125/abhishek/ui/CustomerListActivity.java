@@ -40,8 +40,9 @@ public class CustomerListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_list);
         ButterKnife.bind(this);
 
-        ActionBar mActionBar = getSupportActionBar();
-        mActionBar.setTitle("Customer List");
+        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.custom_action_bar);
 
         rvCustomerList = findViewById(R.id.rvCustomerList);
 
@@ -61,24 +62,24 @@ public class CustomerListActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_customerlist, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.mnuAddCustomer:
-                Intent addCustomer = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
-                startActivity(addCustomer);
-            case R.id.mnuLogout:
-                Intent logoutIntent = new Intent(CustomerListActivity.this, LoginActivity.class);
-                startActivity(logoutIntent);
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_customerlist, menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
+//
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.mnuAddCustomer:
+//                Intent addCustomer = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
+//                startActivity(addCustomer);
+//            case R.id.mnuLogout:
+//                Intent logoutIntent = new Intent(CustomerListActivity.this, LoginActivity.class);
+//                startActivity(logoutIntent);
+//                break;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     private void loadCustomers()
     {
