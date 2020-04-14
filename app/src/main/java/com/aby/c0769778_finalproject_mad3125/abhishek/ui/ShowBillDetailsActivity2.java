@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -71,5 +73,19 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_customerlist, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mnuAddCustomer:
+                Intent addBill = new Intent(ShowBillDetailsActivity2.this, AddNewBillActivity.class);
+                startActivity(addBill);
+                break;
+            case R.id.mnuLogout:
+                Intent logoutIntent = new Intent(ShowBillDetailsActivity2.this, LoginActivity.class);
+                startActivity(logoutIntent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -37,7 +37,6 @@ public class CustomerListActivity extends AppCompatActivity {
 
     @BindView(R.id.imgBtnAddCustomer) ImageButton ImgBtnAddCustomer;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

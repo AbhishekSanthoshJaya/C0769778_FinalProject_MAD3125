@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -60,6 +61,9 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_bill);
         ButterKnife.bind(this);
+
+        ActionBar mActionBar = getSupportActionBar();
+        mActionBar.hide();
 
         ArrayList<String> billType = new ArrayList<>();
         billType.add("MOBILE");
