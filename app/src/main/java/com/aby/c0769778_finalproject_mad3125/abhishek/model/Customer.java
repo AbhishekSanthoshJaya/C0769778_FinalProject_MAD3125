@@ -1,14 +1,11 @@
-package com.aby.c0769778_finalproject_mad3125.model;
+package com.aby.c0769778_finalproject_mad3125.abhishek.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Customer implements Parcelable {
 

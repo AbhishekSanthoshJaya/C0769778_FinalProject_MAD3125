@@ -1,6 +1,5 @@
-package com.aby.c0769778_finalproject_mad3125.ui_fragments;
+package com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,7 +9,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +16,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.model.Bill;
-import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
-import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;
-
-import butterknife.ButterKnife;
 
 
 public class BillsFragment extends Fragment {

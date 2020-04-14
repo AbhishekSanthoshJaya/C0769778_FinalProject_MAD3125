@@ -1,4 +1,4 @@
-package com.aby.c0769778_finalproject_mad3125.adapters;
+package com.aby.c0769778_finalproject_mad3125.abhishek.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.model.Bill;
-import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
-
-import org.w3c.dom.Text;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
+import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;
 

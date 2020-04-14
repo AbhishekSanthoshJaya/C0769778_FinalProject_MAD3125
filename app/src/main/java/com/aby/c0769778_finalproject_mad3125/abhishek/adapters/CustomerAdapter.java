@@ -1,4 +1,4 @@
-package com.aby.c0769778_finalproject_mad3125.adapters;
+package com.aby.c0769778_finalproject_mad3125.abhishek.adapters;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,10 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.ui.AddNewBillActivity;
-import com.aby.c0769778_finalproject_mad3125.ui.ShowBillDetailsActivity;
-import com.aby.c0769778_finalproject_mad3125.ui.ShowBillDetailsActivity2;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.abhishek.ui.ShowBillDetailsActivity2;
 
 import java.util.ArrayList;
 

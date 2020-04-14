@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.PersonInformationEntryActivity">
+        tools:context=".abhishek.ui.PersonInformationEntryActivity">
 
         <FrameLayout
             android:id="@+id/container"
@@ -45,7 +45,7 @@
 
         <fragment
             android:id="@+id/fragment"
-            android:name="com.aby.c0769778_finalproject_mad3125.ui_fragments.BillsFragment"
+            android:name="com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.BillsFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="12dp"

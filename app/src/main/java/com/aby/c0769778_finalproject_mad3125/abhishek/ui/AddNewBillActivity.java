@@ -1,14 +1,12 @@
-package com.aby.c0769778_finalproject_mad3125.ui;
+package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,16 +14,13 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.model.Bill;
-import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.model.Hydro;
-import com.aby.c0769778_finalproject_mad3125.model.Internet;
-import com.aby.c0769778_finalproject_mad3125.model.Mobile;
-import com.aby.c0769778_finalproject_mad3125.util.DataRepository;
-import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Hydro;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Internet;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
+import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 

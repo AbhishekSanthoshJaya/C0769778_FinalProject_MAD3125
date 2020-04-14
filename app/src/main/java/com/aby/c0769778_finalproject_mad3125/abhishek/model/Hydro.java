@@ -1,6 +1,4 @@
-package com.aby.c0769778_finalproject_mad3125.model;
-
-import android.os.Parcel;
+package com.aby.c0769778_finalproject_mad3125.abhishek.model;
 
 import org.joda.time.LocalDate;
 

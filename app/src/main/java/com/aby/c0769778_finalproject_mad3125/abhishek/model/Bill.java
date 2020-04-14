@@ -1,12 +1,9 @@
-package com.aby.c0769778_finalproject_mad3125.model;
-
-import android.os.Parcelable;
+package com.aby.c0769778_finalproject_mad3125.abhishek.model;
 
 
 import org.joda.time.LocalDate;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public abstract class Bill implements Serializable {
 

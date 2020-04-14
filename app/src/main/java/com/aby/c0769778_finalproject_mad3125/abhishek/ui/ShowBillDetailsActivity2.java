@@ -1,4 +1,4 @@
-package com.aby.c0769778_finalproject_mad3125.ui;
+package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.adapters.BillsAdapter;
-import com.aby.c0769778_finalproject_mad3125.adapters.CustomerAdapter;
-import com.aby.c0769778_finalproject_mad3125.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.util.HelperMethods;
+import com.aby.c0769778_finalproject_mad3125.abhishek.adapters.BillsAdapter;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;
 
@@ -41,7 +40,14 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
         billsArrayList = customerObj.getBills();
 
         txtTotalAmountValue = findViewById(R.id.txtTotalAmountValue);
-        txtTotalAmountValue.setText("YOUR TOTAL BILL IS "+ HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
+
+        if(!billsArrayList.isEmpty()) {
+            txtTotalAmountValue.setText("YOUR TOTAL BILL IS " + HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
+        }
+        else
+        {
+            txtTotalAmountValue.setText("NO BILLS TO DISPLAY");
+        }
 
         rvBillsList = findViewById(R.id.rvBillsList);
         billsAdapter = new BillsAdapter(billsArrayList);
