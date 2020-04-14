@@ -68,6 +68,7 @@ public class CustomerListActivity extends AppCompatActivity {
                 startActivity(mIntent);
             }
         });
+
         loadCustomers();
         customerAdapter = new CustomerAdapter(customerArrayList);
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);

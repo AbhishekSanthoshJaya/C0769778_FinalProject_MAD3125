@@ -19,7 +19,7 @@ import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;
 
-public class ShowBillDetailsActivity extends AppCompatActivity {
+public class DetailedBillActivity extends AppCompatActivity {
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
@@ -29,7 +29,7 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bill_details);
+        setContentView(R.layout.activity_detailed_billsview);
 
         Intent mIntent = getIntent();
         Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
@@ -43,7 +43,7 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
         imgAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mIntent = new Intent(ShowBillDetailsActivity.this, AddNewBillActivity.class);
+                Intent mIntent = new Intent(DetailedBillActivity.this, AddNewBillActivity.class);
                 startActivity(mIntent);
             }
         });

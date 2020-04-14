@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.adapters.BillsAdapter;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 public class ShowBillDetailsActivity2 extends AppCompatActivity {
 
     private RecyclerView rvBillsList;
-    private ArrayList billsArrayList;
+    public static ArrayList billsArrayList;
     private BillsAdapter billsAdapter;
     private ImageView imgAddButton;
     private TextView txtTotalAmountValue;
@@ -44,7 +45,7 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
         txtTotalAmountValue = findViewById(R.id.txtTotalAmountValue);
 
         if(!billsArrayList.isEmpty()) {
-            txtTotalAmountValue.setText("YOUR TOTAL BILL IS " + HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
+            txtTotalAmountValue.setText("YOUR TOTAL IS " + HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
         }
         else
         {
@@ -87,5 +88,10 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public ArrayList<Bill> getBillsArrayList()
+    {
+        return this.billsArrayList;
     }
 }

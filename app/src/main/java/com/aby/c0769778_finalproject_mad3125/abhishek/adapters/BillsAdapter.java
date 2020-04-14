@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHolder> {
 
-    private ArrayList<Bill> billArrayList;
+    public static ArrayList<Bill> billArrayList;
 
     public BillsAdapter(ArrayList<Bill> billArrayList)
     {
