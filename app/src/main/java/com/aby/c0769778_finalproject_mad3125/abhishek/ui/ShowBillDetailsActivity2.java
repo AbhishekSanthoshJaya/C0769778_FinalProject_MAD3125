@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class ShowBillDetailsActivity2 extends AppCompatActivity {
 
     private RecyclerView rvBillsList;
-    public static ArrayList billsArrayList;
+    private ArrayList billsArrayList;
     private BillsAdapter billsAdapter;
     private ImageView imgAddButton;
     private TextView txtTotalAmountValue;
@@ -53,7 +53,7 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
         }
 
         rvBillsList = findViewById(R.id.rvBillsList);
-        billsAdapter = new BillsAdapter(billsArrayList);
+        billsAdapter = new BillsAdapter(this.billsArrayList);
 
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 

@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.abhishek.ui.DetailedBillActivity;
+import com.aby.c0769778_finalproject_mad3125.abhishek.ui.ShowBillDetailsActivity2;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;
@@ -52,6 +56,17 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
         holder.txtCellBillAmount.setText(HelperMethods.getInstance().doubleFormatter(mBills.getBillTotal()));
         holder.txtCellBillDate.setText(mBills.getBillDate().toString());
         holder.txtCellBillType.setText(mBills.getBillType().toString());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bill billObj = billArrayList.get(position);
+
+                Intent mIntent = new Intent(holder.itemView.getContext(), DetailedBillActivity.class);
+                mIntent.putExtra("Bills", billObj);
+                holder.itemView.getContext().startActivity(mIntent);
+            }
+        });
     }
 
     @Override

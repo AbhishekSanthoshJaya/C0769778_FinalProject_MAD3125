@@ -18,7 +18,7 @@ public class Customer implements Parcelable {
     private String password;
     private String location;
     private String dateOfBirth;
-    public static HashMap<String, Bill> customerBills = new HashMap<String, Bill>();
+    private HashMap<String, Bill> customerBills = new HashMap<String, Bill>();
     private Double allTotal;
     private int customerImg;
 
@@ -200,7 +200,7 @@ public class Customer implements Parcelable {
         dest.writeInt(customerImg);
     }
 
-    public static ArrayList<Bill> getBills()
+    public ArrayList<Bill> getBills()
     {
         Collection<Bill> demoValues = customerBills.values();
         ArrayList<Bill> billsList = new ArrayList<>(demoValues);

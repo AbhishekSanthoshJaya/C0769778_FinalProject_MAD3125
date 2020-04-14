@@ -25,10 +25,6 @@ import java.util.ArrayList;
 
 public class BillsFragment extends Fragment {
 
-    private TextView txtBillId;
-    private TextView txtBillDate;
-    private TextView txtBillAmount;
-    private ImageView imgBillType;
     double totalAmount;
 
     FragmentManager mFragmentManager;
@@ -48,50 +44,41 @@ public class BillsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
-        super.onViewCreated(view, savedInstanceState);
-        txtBillId = getView().findViewById(R.id.txtBillId);
-        txtBillDate = getView().findViewById(R.id.txtBillDate);
-        txtBillAmount = getView().findViewById(R.id.txtBillAmount);
-        imgBillType = getView().findViewById(R.id.imgBillType);
+//        super.onViewCreated(view, savedInstanceState);
+//        txtBillId = getView().findViewById(R.id.txtBillId);
+//        txtBillDate = getView().findViewById(R.id.txtBillDate);
+//        txtBillAmount = getView().findViewById(R.id.txtBillAmount);
+//        imgBillType = getView().findViewById(R.id.imgBillType);
 
         Intent mIntent = getActivity().getIntent();
-        Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
+        Bill billObj = mIntent.getParcelableExtra("Bills");
 
-        // cust = (Customer) getActivity().getIntent().getExtras().getSerializable("billsKey");
-        ArrayList<Bill> bills = customerObj.getBills();
-        for(int j = 0; j< bills.size(); j++)
-        {
-            totalAmount += bills.get(j).getBillTotal();
-        }
-
-       // Log.d("Tag", String.valueOf(totalAmount));
-
-        for(int i =0; i <bills.size(); i++)
-        {
-            if(bills.get(i).getBillId().contains("MB"))
-            {
-                txtBillId.setText(bills.get(i).getBillId());
-                imgBillType.setImageResource(R.drawable.mobileicon);
-                txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
-                txtBillDate.setText(bills.get(i).getBillDate().toString());
-            }
-
-            if(bills.get(i).getBillId().contains("HY"))
-            {
-                txtBillId.setText(bills.get(i).getBillId());
-                imgBillType.setImageResource(R.drawable.watericon);
-                txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
-                txtBillDate.setText(bills.get(i).getBillDate().toString());
-            }
-
-            if(bills.get(i).getBillId().contains("IN"))
-            {
-                txtBillId.setText(bills.get(i).getBillId());
-                imgBillType.setImageResource(R.drawable.interneticon);
-                txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
-                txtBillDate.setText(bills.get(i).getBillDate().toString());
-            }
-        }
+//        for(int i =0; i <bills.size(); i++)
+//        {
+//            if(bills.get(i).getBillId().contains("MB"))
+//            {
+//                txtBillId.setText(bills.get(i).getBillId());
+//                imgBillType.setImageResource(R.drawable.mobileicon);
+//                txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
+//                txtBillDate.setText(bills.get(i).getBillDate().toString());
+//            }
+//
+//            if(bills.get(i).getBillId().contains("HY"))
+//            {
+//                txtBillId.setText(bills.get(i).getBillId());
+//                imgBillType.setImageResource(R.drawable.watericon);
+//                txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
+//                txtBillDate.setText(bills.get(i).getBillDate().toString());
+//            }
+//
+//            if(bills.get(i).getBillId().contains("IN"))
+//            {
+//                txtBillId.setText(bills.get(i).getBillId());
+//                imgBillType.setImageResource(R.drawable.interneticon);
+//                txtBillAmount.setText(HelperMethods.getInstance().doubleFormatter(bills.get(i).billCalculate()));
+//                txtBillDate.setText(bills.get(i).getBillDate().toString());
+//            }
+//        }
 //        MainActivity mMainActivity = (MainActivity) getActivity();
 //        mMainActivity.hello = "Hi From Fragment";
 

@@ -34,9 +34,8 @@ public class DetailedBillActivity extends AppCompatActivity {
         Intent mIntent = getIntent();
         Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
 
-        ArrayList<Bill> bills = customerObj.getBills();
+        //ArrayList<Bill> bills = customerObj.getBills();
 
-        txtTotalAmount = findViewById(R.id.txtTotalAmount);
         imgAddButton = findViewById(R.id.imgAddBill);
         imgAddButton.setImageResource(R.drawable.addbillsicon);
 
