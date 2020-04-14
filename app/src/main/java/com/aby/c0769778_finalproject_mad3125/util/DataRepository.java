@@ -105,9 +105,15 @@ public class DataRepository {
                 Bill.BillType.Internet,
                 "SKYLINK",
                 22.8);
-        c2.addBill("IN100", in1);
+        Internet in2 = new Internet("IN200",
+                org.joda.time.LocalDate.now(),
+                Bill.BillType.Internet,
+                "SKYLINK",
+                22.8);
+        c1.addBill("IN100", in1);
         c1.addBill("MB100", m1);
         c1.addBill("HY100", h1);
+        c1.addBill("IN200", in2);
         customerMap.put(c1.getCustomerId(),c1);
         customerMap.put(c2.getCustomerId(),c2);
         customerMap.put(c3.getCustomerId(),c3);

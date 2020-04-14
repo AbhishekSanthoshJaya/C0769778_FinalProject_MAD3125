@@ -41,7 +41,7 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
         billsArrayList = customerObj.getBills();
 
         txtTotalAmountValue = findViewById(R.id.txtTotalAmountValue);
-        txtTotalAmountValue.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
+        txtTotalAmountValue.setText("YOUR TOTAL BILL IS "+ HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 
         rvBillsList = findViewById(R.id.rvBillsList);
         billsAdapter = new BillsAdapter(billsArrayList);
@@ -59,6 +59,10 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
                 startActivity(mIntent);
             }
         });
-
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_customerlist, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
