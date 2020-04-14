@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -31,8 +32,11 @@ public class CustomerListActivity extends AppCompatActivity {
     private ArrayList customerArrayList;
     private ArrayList tempCustomerArrayList;
     private CustomerAdapter customerAdapter;
+    private ImageView barAddCustomer;
+    private ImageView barLogout;
 
     @BindView(R.id.imgBtnAddCustomer) ImageButton ImgBtnAddCustomer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +47,28 @@ public class CustomerListActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.custom_action_bar);
+        View view = getSupportActionBar().getCustomView();
+
+        barAddCustomer = view.findViewById(R.id.barAddCustomer);
+        barLogout = view.findViewById(R.id.barLogout);
 
         rvCustomerList = findViewById(R.id.rvCustomerList);
 
+        barAddCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
+                startActivity(mIntent);
+            }
+        });
+
+        barLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(CustomerListActivity.this, LoginActivity.class);
+                startActivity(mIntent);
+            }
+        });
         loadCustomers();
         customerAdapter = new CustomerAdapter(customerArrayList);
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
