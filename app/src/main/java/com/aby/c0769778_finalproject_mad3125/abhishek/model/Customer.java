@@ -18,7 +18,7 @@ public class Customer implements Parcelable {
     private String password;
     private String location;
     private String dateOfBirth;
-    private HashMap<String, Bill> customerBills = new HashMap<String, Bill>();
+    private HashMap<String, Bill> customerBillsHashMap = new HashMap<String, Bill>();
     private Double allTotal;
     private int customerImg;
 
@@ -45,7 +45,7 @@ public class Customer implements Parcelable {
         password = in.readString();
         location = in.readString();
         dateOfBirth = in.readString();
-        customerBills = in.readHashMap(Bill.class.getClassLoader());
+        customerBillsHashMap = in.readHashMap(Bill.class.getClassLoader());
         allTotal = in.readDouble();
         customerImg = in.readInt();
     }
@@ -107,7 +107,7 @@ public class Customer implements Parcelable {
 
     public void addBill(String billId, Bill bill)
     {
-        this.customerBills.put(billId, bill);
+        this.customerBillsHashMap.put(billId, bill);
     }
 
     public String getCustomerId() {
@@ -159,11 +159,11 @@ public class Customer implements Parcelable {
     }
 
     public HashMap<String, Bill> getCustomerBills() {
-        return customerBills;
+        return customerBillsHashMap;
     }
 
     public void setCustomerBills(HashMap<String, Bill> customerBills) {
-        this.customerBills = customerBills;
+        this.customerBillsHashMap = customerBills;
     }
 
     public Double getAllTotal() {
@@ -190,7 +190,7 @@ public class Customer implements Parcelable {
         dest.writeString(password);
         dest.writeString(location);
         dest.writeString(dateOfBirth);
-        dest.writeMap(customerBills);
+        dest.writeMap(customerBillsHashMap);
         if (allTotal == null) {
             dest.writeByte((byte) 0);
         } else {
@@ -202,7 +202,7 @@ public class Customer implements Parcelable {
 
     public ArrayList<Bill> getBills()
     {
-        Collection<Bill> demoValues = customerBills.values();
+        Collection<Bill> demoValues = customerBillsHashMap.values();
         ArrayList<Bill> billsList = new ArrayList<>(demoValues);
         return billsList;
     }
@@ -210,7 +210,7 @@ public class Customer implements Parcelable {
     public double getTotalAmount()
     {
         double allTotal2 = 0.0d;
-        for (Bill b : customerBills.values())
+        for (Bill b : customerBillsHashMap.values())
         {
             allTotal2 += b.billTotal;
         }

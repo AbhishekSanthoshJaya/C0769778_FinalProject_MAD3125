@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".abhishek.ui.ShowBillDetailsActivity2" />
+        <activity android:name=".abhishek.ui.ShowBillDetailsActivity" />
         <activity android:name=".abhishek.ui.AddNewBillActivity" />
         <activity android:name=".abhishek.ui.DetailedBillActivity" />
         <activity android:name=".abhishek.ui.AddCustomerActivity" />

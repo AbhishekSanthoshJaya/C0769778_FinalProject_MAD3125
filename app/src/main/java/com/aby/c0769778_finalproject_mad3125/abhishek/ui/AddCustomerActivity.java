@@ -186,7 +186,7 @@ public class AddCustomerActivity extends AppCompatActivity {
                     R.drawable.icon_newuser);
             DataRepository.getInstance().getCustomerMap().put(customer.getCustomerId(), customer);
             Intent mIntent = new Intent(AddCustomerActivity.this, CustomerListActivity.class);
-            mIntent.putExtra("Customer", customer);
+            mIntent.putExtra("CustomerBills", customer);
             startActivity(mIntent);
         }
     }

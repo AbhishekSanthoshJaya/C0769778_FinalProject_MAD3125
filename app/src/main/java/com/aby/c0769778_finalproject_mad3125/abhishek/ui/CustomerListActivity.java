@@ -19,6 +19,13 @@ import com.aby.c0769778_finalproject_mad3125.abhishek.adapters.CustomerAdapter;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.DataRepository;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -31,6 +38,7 @@ public class CustomerListActivity extends AppCompatActivity {
     private RecyclerView rvCustomerList;
     private ArrayList customerArrayList;
     private ArrayList tempCustomerArrayList;
+    private ArrayList<Customer> tempCustomerListArrayList;
     private CustomerAdapter customerAdapter;
     private ImageView barAddCustomer;
     private ImageView barLogout;
@@ -70,6 +78,8 @@ public class CustomerListActivity extends AppCompatActivity {
         });
 
         loadCustomers();
+        //readJson();
+        //customerAdapter = new CustomerAdapter(DataRepository.getInstance().getCustomerDataList());
         customerAdapter = new CustomerAdapter(customerArrayList);
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -85,25 +95,6 @@ public class CustomerListActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu_customerlist, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-//
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.mnuAddCustomer:
-//                Intent addCustomer = new Intent(CustomerListActivity.this, AddCustomerActivity.class);
-//                startActivity(addCustomer);
-//            case R.id.mnuLogout:
-//                Intent logoutIntent = new Intent(CustomerListActivity.this, LoginActivity.class);
-//                startActivity(logoutIntent);
-//                break;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-
     private void loadCustomers()
     {
         DataRepository.getInstance().loadData();
@@ -113,4 +104,54 @@ public class CustomerListActivity extends AppCompatActivity {
         tempCustomerArrayList = new ArrayList<>(demoValues);
         customerArrayList.addAll(tempCustomerArrayList);
     }
+
+//    public String loadJSONFromAsset() {
+//        String json = null;
+//        try {
+//            InputStream is = getAssets().open("Customer.json");
+//            int size = is.available();
+//            byte[] buffer = new byte[size];
+//            is.read(buffer);
+//            is.close();
+//            json = new String(buffer, StandardCharsets.UTF_8);
+//        } catch (IOException ex) {
+//            ex.printStackTrace();
+//            return null;
+//        }
+//        return json;
+//    }
+//
+//    private void readJson()
+//    {
+//        String js = loadJSONFromAsset();
+//        if(js!=null)
+//        {
+//            try {
+//                JSONArray jsonArray = new JSONArray(js);
+//                tempCustomerListArrayList = new ArrayList<>();
+//                for(int i=0; i<jsonArray.length();i++)
+//                {
+//                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+//                    if(jsonObject.has("id"))
+//                    {
+//                        String customerId = jsonObject.getString("customerId");
+//                        String firstName = jsonObject.getString("firstName");
+//                        String lastName = jsonObject.getString("lastName");
+//                        String gender = jsonObject.getString("gender");
+//                        String email = jsonObject.getString("email");
+//                        String userName = jsonObject.getString("username");
+//                        String password = jsonObject.getString("password");
+//                        String location = jsonObject.getString("location");
+//                        String dateOfBirth = jsonObject.getString("dateOfBirth");
+//                        tempCustomerListArrayList.add(new Customer(customerId, firstName, lastName, gender, email, userName, password, location, dateOfBirth, R.drawable.icon_newuser));
+//                    }
+//                }
+//                //c.setCustomerArrayList(customerArrayList);
+//                DataRepository.getInstance().setCustomerDataList(tempCustomerListArrayList);
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+
 }

@@ -1,0 +1,69 @@
+[
+  {
+    "customerId": "ID001",
+    "firstName": "Abhishek",
+    "lastName": "Santhosh",
+    "gender": "Male",
+    "email": "aby@gmail.com",
+    "userName" : "aby",
+    "password" : "123",
+    "location" : "Kerala, India",
+    "dateOfBirth" : "18/04/1995"
+  },
+  {
+    "customerId": "ID002",
+    "firstName": "Prakash",
+    "lastName": "Rana",
+    "gender": "Male",
+    "email": "prakash@gmail.com",
+    "userName" : "Rana",
+    "password" : "codemaster",
+    "location" : "Kathmandu, Nepal",
+    "dateOfBirth" : "27/04/1995"
+  },
+  {
+    "customerId": "ID003",
+    "firstName": "Priteshkumar",
+    "lastName": "Patel",
+    "gender": "Male",
+    "email": "pritesh@gmail.com",
+    "userName" : "TheLion",
+    "password" : "codegod",
+    "location" : "Gujarat, India",
+    "dateOfBirth" : "21/07/1983"
+  },
+  {
+    "customerId": "ID004",
+    "firstName": "Kritima",
+    "lastName": "Kukreja",
+    "gender": "Female",
+    "email": "kritima@gmail.com",
+    "userName" : "Kritima",
+    "password" : "codepro",
+    "location" : "New Delhi, India",
+    "dateOfBirth" : "05/01/1983"
+  },
+  {
+    "customerId": "ID005",
+    "firstName": "Raghav",
+    "lastName": "Bobal",
+    "gender": "Male",
+    "email": "raghav@gmail.com",
+    "userName" : "Raghav",
+    "password" : "password",
+    "location" : "New Delhi, India",
+    "dateOfBirth" : "27/07/1991"
+  },
+  {
+    "customerId": "ID006",
+    "firstName": "Jyothi",
+    "lastName": "Thomas",
+    "gender": "Feale",
+    "email": "jyothi@gmail.com",
+    "userName" : "Jyothi",
+    "password" : "password2",
+    "location" : "Kerala, India",
+    "dateOfBirth" : "27/07/1991"
+  }
+  ]
+

@@ -18,13 +18,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.abhishek.adapters.BillsAdapter;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Hydro;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Internet;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
-import com.aby.c0769778_finalproject_mad3125.abhishek.util.DataRepository;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -59,12 +57,17 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
     @BindView(R.id.btnBillClear) Button btnBillClear;
 
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+    Customer customerObj2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_bill);
         ButterKnife.bind(this);
+
+        Intent mIntent = getIntent();
+        customerObj2 = mIntent.getParcelableExtra("CustomerBills2");
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
@@ -115,9 +118,9 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             Integer.parseInt(edtDataUsedText.getText().toString()),
                             Integer.parseInt(edtMinsUsedText.getText().toString()));
                     HelperMethods.getInstance().makeToast(mObj.getMobileNumber(), AddNewBillActivity.this);
-                   // Customer.getBills().add(mObj);
-//                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity2.class);
-//                    startActivity(mIntent);
+                  //  Customer.customerBillsHashMap.put(mObj.getBillId(), mObj);
+                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
+                    startActivity(mIntent);
                 }
             });
         }
@@ -139,8 +142,10 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             edtAgencyNameText.getText().toString(),
                             Integer.parseInt(edtUnitsUsedText.getText().toString()));
                     HelperMethods.getInstance().makeToast(hObj.getAgencyName(), AddNewBillActivity.this);
-                    //Customer.getBills().add(hObj);
-                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity2.class);
+                    customerObj2.addBill(hObj.getBillId(), hObj);
+                    //ShowBillDetailsActivity.billsArrayListDetail.add(hObj);
+                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
+                    mIntent.putExtra("Customer", customerObj2);
                     startActivity(mIntent);
                 }
             });

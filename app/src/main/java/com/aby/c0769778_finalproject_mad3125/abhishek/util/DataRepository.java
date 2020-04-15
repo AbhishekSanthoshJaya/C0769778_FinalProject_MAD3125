@@ -7,6 +7,8 @@ import com.aby.c0769778_finalproject_mad3125.abhishek.model.Hydro;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Internet;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DataRepository {
@@ -17,9 +19,18 @@ public class DataRepository {
     }
     private DataRepository() { }
     private HashMap<String, Customer> customerMap = new HashMap<>();
+    private ArrayList<Customer> customerDataList = new ArrayList<>();
 
     public HashMap getCustomerMap(){
         return this.customerMap;
+    }
+
+    public void setCustomerDataList(ArrayList customerDataList) {
+        this.customerDataList = customerDataList;
+    }
+
+    public ArrayList getCustomerDataList() {
+        return customerDataList;
     }
 
     public void loadData() {

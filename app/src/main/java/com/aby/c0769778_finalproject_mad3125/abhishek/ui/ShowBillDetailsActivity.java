@@ -20,15 +20,17 @@ import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class ShowBillDetailsActivity2 extends AppCompatActivity {
+public class ShowBillDetailsActivity extends AppCompatActivity {
 
     private RecyclerView rvBillsList;
-    private ArrayList billsArrayList;
+    public static ArrayList<Bill> billsArrayListDetail = new ArrayList<>();
     private BillsAdapter billsAdapter;
     private ImageView imgAddButton;
     private TextView txtTotalAmountValue;
+    private ArrayList<Bill> billsArrayListUpdated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +42,28 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
 
         Intent mIntent = getIntent();
         Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
-        billsArrayList = customerObj.getBills();
+        billsArrayListDetail = customerObj.getBills();
+
+//        Customer customerObjUpdated = mIntent.getParcelableExtra("Customer");
+//        billsArrayListUpdated = customerObjUpdated.getBills();
 
         txtTotalAmountValue = findViewById(R.id.txtTotalAmountValue);
 
-        if(!billsArrayList.isEmpty()) {
+        if(!billsArrayListDetail.isEmpty())
+            {
             txtTotalAmountValue.setText("YOUR TOTAL IS " + HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
-        }
+            }
         else
         {
             txtTotalAmountValue.setText("NO BILLS TO DISPLAY");
         }
 
         rvBillsList = findViewById(R.id.rvBillsList);
-        billsAdapter = new BillsAdapter(this.billsArrayList);
+        billsAdapter = new BillsAdapter(this.billsArrayListDetail);
 
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
+        billsAdapter.notifyDataSetChanged();
         rvBillsList.setLayoutManager(mLinearLayoutManager);
         rvBillsList.setAdapter(billsAdapter);
 
@@ -64,7 +71,8 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
         imgAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mIntent = new Intent(ShowBillDetailsActivity2.this, AddNewBillActivity.class);
+                Intent mIntent = new Intent(ShowBillDetailsActivity.this, AddNewBillActivity.class);
+                mIntent.putExtra("CustomerBills2", customerObj);
                 startActivity(mIntent);
             }
         });
@@ -79,11 +87,11 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mnuAddCustomer:
-                Intent addBill = new Intent(ShowBillDetailsActivity2.this, AddNewBillActivity.class);
+                Intent addBill = new Intent(ShowBillDetailsActivity.this, AddNewBillActivity.class);
                 startActivity(addBill);
                 break;
             case R.id.mnuLogout:
-                Intent logoutIntent = new Intent(ShowBillDetailsActivity2.this, LoginActivity.class);
+                Intent logoutIntent = new Intent(ShowBillDetailsActivity.this, LoginActivity.class);
                 startActivity(logoutIntent);
                 break;
         }
@@ -92,6 +100,6 @@ public class ShowBillDetailsActivity2 extends AppCompatActivity {
 
     public ArrayList<Bill> getBillsArrayList()
     {
-        return this.billsArrayList;
+        return this.billsArrayListDetail;
     }
 }
