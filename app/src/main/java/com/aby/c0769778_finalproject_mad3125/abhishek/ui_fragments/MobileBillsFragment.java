@@ -54,10 +54,8 @@ public class MobileBillsFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        Intent mIntent = getActivity().getIntent();
-        Bill billObj = mIntent.getParcelableExtra("Bills");
-        Mobile m = DataRepository.getInstance().getMobileBill(billObj.getBillId());
-        txtFragBillId.setText(m.getBillId());
+       // Mobile m = DataRepository.getInstance().getMobileBill(billObj.getBillId());
+        //txtFragBillId.setText(m.getBillId());
     }
 //        for(int i =0; i <bills.size(); i++)
 //        {
