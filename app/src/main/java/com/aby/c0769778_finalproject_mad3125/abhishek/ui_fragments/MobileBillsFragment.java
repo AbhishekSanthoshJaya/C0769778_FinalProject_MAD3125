@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
+import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import org.w3c.dom.Text;
@@ -28,7 +29,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class BillsFragment extends Fragment {
+public class MobileBillsFragment extends Fragment {
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
@@ -41,7 +42,9 @@ public class BillsFragment extends Fragment {
     @BindView(R.id.txtFragMinsUsed) TextView txtFragMinsUsed;
     @BindView(R.id.txtFragBillAmount) TextView txtFragBillAmount;
 
-    public BillsFragment() {
+    private Mobile m;
+
+    public MobileBillsFragment() {
         // Required empty public constructor
     }
 
@@ -60,7 +63,7 @@ public class BillsFragment extends Fragment {
         Bill billObj = mIntent.getParcelableExtra("Bills");
         if(billObj.getBillId().contains("MB"))
         {
-           // txtFragBillId.setText(billObj.get);
+            //txtFragBillId.setText();
         }
 //        for(int i =0; i <bills.size(); i++)
 //        {

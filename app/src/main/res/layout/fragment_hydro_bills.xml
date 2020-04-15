@@ -2,16 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/rounded_edittext"
-    tools:context=".abhishek.ui_fragments.MobileBillsFragment">
+    tools:context=".abhishek.ui_fragments.HydroBillsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
-        android:id="@+id/imgBillType"
+        android:id="@+id/imgBillTypeHydro"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="4dp"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.51" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text1"
+        android:id="@+id/textHyd1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text2"
+        android:id="@+id/textHyd2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text3"
+        android:id="@+id/textHy3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -105,33 +105,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-    android:id="@+id/text4"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="100dp"
-    android:layout_marginTop="220dp"
-    android:layout_marginEnd="175dp"
-    android:layout_marginBottom="385dp"
-    android:background="@drawable/rounded_edittext"
-    android:backgroundTint="#1FCDF0"
-    android:fontFamily="@font/miriam_libre"
-    android:paddingStart="5dp"
-    android:paddingEnd="5dp"
-    android:shadowColor="#0E0000"
-    android:text="Manufacturer"
-    android:textAlignment="center"
-    android:textColor="#000000"
-    android:textColorHighlight="@color/colorPrimary"
-    android:textColorLink="#FFF9FD"
-    android:textSize="18sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textHy4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="385dp"
+        android:background="@drawable/rounded_edittext"
+        android:backgroundTint="#1FCDF0"
+        android:fontFamily="@font/miriam_libre"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:shadowColor="#0E0000"
+        android:text="Agency Name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorLink="#FFF9FD"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text5"
+        android:id="@+id/textHyd5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -144,7 +144,7 @@
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:shadowColor="#0E0000"
-        android:text="Plan Name"
+        android:text="Units Used"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHighlight="@color/colorPrimary"
@@ -157,60 +157,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="335dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="385dp"
-        android:background="@drawable/rounded_edittext"
-        android:backgroundTint="#1FCDF0"
-        android:fontFamily="@font/miriam_libre"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        android:shadowColor="#0E0000"
-        android:text="Data Used"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="#FFF9FD"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/text7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="390dp"
-        android:layout_marginEnd="175dp"
-        android:layout_marginBottom="385dp"
-        android:background="@drawable/rounded_edittext"
-        android:backgroundTint="#1FCDF0"
-        android:fontFamily="@font/miriam_libre"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        android:shadowColor="#0E0000"
-        android:text="Mins Used"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="#FFF9FD"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragManufac"
+        android:id="@+id/txtFragAgency"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"
@@ -223,7 +170,7 @@
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:shadowColor="#0E0000"
-        android:text="Manufacturer"
+        android:text="Agency"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHighlight="@color/colorPrimary"
@@ -236,7 +183,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragPlanName"
+        android:id="@+id/txtFragUnitsUsed"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"
@@ -249,7 +196,7 @@
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:shadowColor="#0E0000"
-        android:text="Plan Name"
+        android:text="Units Used"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHighlight="@color/colorPrimary"
@@ -262,59 +209,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-    android:id="@+id/txtFragDataUsed"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="245dp"
-    android:layout_marginTop="335dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="385dp"
-    android:background="@color/colorAccent"
-    android:backgroundTint="#1FCDF0"
-    android:fontFamily="@font/acme"
-    android:paddingStart="5dp"
-    android:paddingEnd="5dp"
-    android:shadowColor="#0E0000"
-    android:text="Data Used"
-    android:textAlignment="center"
-    android:textColor="#000000"
-    android:textColorHighlight="@color/colorPrimary"
-    android:textColorLink="#FFF9FD"
-    android:textSize="18sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragMinsUsed"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="245dp"
-        android:layout_marginTop="390dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="385dp"
-        android:background="@color/colorAccent"
-        android:backgroundTint="#1FCDF0"
-        android:fontFamily="@font/acme"
-        android:paddingStart="5dp"
-        android:paddingEnd="5dp"
-        android:shadowColor="#0E0000"
-        android:text="Mins Used"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="#FFF9FD"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragBillId"
+        android:id="@+id/txtFragHydBillId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"
@@ -340,7 +235,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragBillDate"
+        android:id="@+id/txtFragHydBillDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"
@@ -366,7 +261,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtFragBillAmount"
+        android:id="@+id/txtFragHydBillAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"

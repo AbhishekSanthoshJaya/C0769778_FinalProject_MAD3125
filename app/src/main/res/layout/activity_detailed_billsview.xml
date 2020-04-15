@@ -29,7 +29,7 @@
 
         <fragment
             android:id="@+id/fragment"
-            android:name="com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.BillsFragment"
+            android:name="com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.MobileBillsFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="12dp"

@@ -5,19 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
-import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
-import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.BillsFragment;
-import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
-
-import java.util.ArrayList;
+import com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.MobileBillsFragment;
 
 public class DetailedBillActivity extends AppCompatActivity {
 
@@ -34,7 +25,7 @@ public class DetailedBillActivity extends AppCompatActivity {
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
-        mFragmentTransaction.add(R.id.container, new BillsFragment());
+        mFragmentTransaction.add(R.id.container, new MobileBillsFragment());
         mFragmentTransaction.commit();
 
 //        mFragmentTransaction = mFragmentManager.beginTransaction();
