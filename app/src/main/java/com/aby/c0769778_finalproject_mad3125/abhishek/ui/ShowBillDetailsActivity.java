@@ -43,9 +43,6 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
         Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
         billsArrayListDetail = customerObj.getBills();
 
-//        Customer customerObjUpdated = mIntent.getParcelableExtra("Customer");
-//        billsArrayListUpdated = customerObjUpdated.getBills();
-
         txtTotalAmountValue = findViewById(R.id.txtTotalAmountValue);
 
         if(!billsArrayListDetail.isEmpty())
