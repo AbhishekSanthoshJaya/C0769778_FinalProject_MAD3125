@@ -117,9 +117,9 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             edtNumberText.getText().toString(),
                             Integer.parseInt(edtDataUsedText.getText().toString()),
                             Integer.parseInt(edtMinsUsedText.getText().toString()));
-                    HelperMethods.getInstance().makeToast(mObj.getMobileNumber(), AddNewBillActivity.this);
-                  //  Customer.customerBillsHashMap.put(mObj.getBillId(), mObj);
+                    customerObj2.getCustomerBills().put(mObj.getBillId(),mObj);
                     Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
+                    mIntent.putExtra("CustomerBills", customerObj2);
                     startActivity(mIntent);
                 }
             });
@@ -141,11 +141,9 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             Bill.BillType.Hydro,
                             edtAgencyNameText.getText().toString(),
                             Integer.parseInt(edtUnitsUsedText.getText().toString()));
-                    HelperMethods.getInstance().makeToast(hObj.getAgencyName(), AddNewBillActivity.this);
-                    customerObj2.addBill(hObj.getBillId(), hObj);
-                    //ShowBillDetailsActivity.billsArrayListDetail.add(hObj);
+                    customerObj2.getCustomerBills().put(hObj.getBillId(),hObj);
                     Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
-                    mIntent.putExtra("Customer", customerObj2);
+                    mIntent.putExtra("CustomerBills", customerObj2);
                     startActivity(mIntent);
                 }
             });
@@ -167,10 +165,10 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             Bill.BillType.Hydro,
                             edtAgencyNameText.getText().toString(),
                             Double.parseDouble(edtUnitsUsedText.getText().toString()));
-                    //Customer.getBills().add(iObj);
-                    HelperMethods.getInstance().makeToast(iObj.getProviderName(), AddNewBillActivity.this);
-//                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity2.class);
-//                    startActivity(mIntent);
+                    customerObj2.getCustomerBills().put(iObj.getBillId(),iObj);
+                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
+                    mIntent.putExtra("CustomerBills", customerObj2);
+                    startActivity(mIntent);
                 }
             });
         }

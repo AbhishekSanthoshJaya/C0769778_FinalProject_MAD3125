@@ -30,7 +30,6 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
     private BillsAdapter billsAdapter;
     private ImageView imgAddButton;
     private TextView txtTotalAmountValue;
-    private ArrayList<Bill> billsArrayListUpdated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
