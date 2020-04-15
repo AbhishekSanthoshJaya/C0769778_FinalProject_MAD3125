@@ -21,8 +21,8 @@ public class DataRepository {
     private HashMap<String, Customer> customerMap = new HashMap<>();
     private ArrayList<Customer> customerDataList = new ArrayList<>();
     private ArrayList<Mobile> mobileBills = new ArrayList<>();
-    private ArrayList<Mobile> hydroBills = new ArrayList<>();
-    private ArrayList<Mobile> internetBills = new ArrayList<>();
+    private ArrayList<Hydro> hydroBills = new ArrayList<>();
+    private ArrayList<Internet> internetBills = new ArrayList<>();
 
     public HashMap getCustomerMap(){
         return this.customerMap;
@@ -47,6 +47,26 @@ public class DataRepository {
         return null;
         }
 
+    public Hydro getHydroBill(String billId) {
+        for(Hydro hb : hydroBills)
+        {
+            if(hb.getBillId() == billId)
+            {
+                return hb;
+            }
+        }
+        return null;
+    }
+    public Internet getInternetBill(String billId) {
+        for(Internet ib : internetBills)
+        {
+            if(ib.getBillId() == billId)
+            {
+                return ib;
+            }
+        }
+        return null;
+    }
 
     public void loadData() {
         Customer c1 = new Customer("ID001",
@@ -131,6 +151,9 @@ public class DataRepository {
         c1.addBill("HY100", h1);
         c1.addBill("IN200", in2);
         mobileBills.add(m1);
+        hydroBills.add(h1);
+        internetBills.add(in1);
+        internetBills.add(in2);
         customerMap.put(c1.getCustomerId(),c1);
         customerMap.put(c2.getCustomerId(),c2);
         customerMap.put(c3.getCustomerId(),c3);

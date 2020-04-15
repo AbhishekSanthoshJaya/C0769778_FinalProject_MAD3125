@@ -36,19 +36,19 @@ public class DetailedBillActivity extends AppCompatActivity {
             mFragmentTransaction.add(R.id.container, new MobileBillsFragment());
             mFragmentTransaction.commit();
         }
-//        if(billObj.getBillId().contains("HY"))
-//        {
-//            mFragmentManager = getSupportFragmentManager();
-//            mFragmentTransaction = mFragmentManager.beginTransaction();
-//            mFragmentTransaction.add(R.id.container, new HydroBillsFragment());
-//            mFragmentTransaction.commit();
-//        }
-//        if(billObj.getBillId().contains("IN"))
-//        {
-//            mFragmentManager = getSupportFragmentManager();
-//            mFragmentTransaction = mFragmentManager.beginTransaction();
-//            mFragmentTransaction.add(R.id.container, new InternetFragment());
-//            mFragmentTransaction.commit();
-//        }
+        if(billObj.getBillId().contains("HY"))
+        {
+            mFragmentManager = getSupportFragmentManager();
+            mFragmentTransaction = mFragmentManager.beginTransaction();
+            mFragmentTransaction.add(R.id.container, new HydroBillsFragment());
+            mFragmentTransaction.commit();
+        }
+        if(billObj.getBillId().contains("IN"))
+        {
+            mFragmentManager = getSupportFragmentManager();
+            mFragmentTransaction = mFragmentManager.beginTransaction();
+            mFragmentTransaction.add(R.id.container, new InternetFragment());
+            mFragmentTransaction.commit();
+        }
     }
 }
