@@ -19,6 +19,7 @@ import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
+import com.aby.c0769778_finalproject_mad3125.abhishek.util.DataRepository;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import org.w3c.dom.Text;
@@ -31,9 +32,6 @@ import butterknife.ButterKnife;
 
 public class MobileBillsFragment extends Fragment {
 
-    FragmentManager mFragmentManager;
-    FragmentTransaction mFragmentTransaction;
-
     @BindView(R.id.txtFragBillId) TextView txtFragBillId;
     @BindView(R.id.txtFragBillDate) TextView txtFragBillDate;
     @BindView(R.id.txtFragDataUsed) TextView txtFragDataUsed;
@@ -41,8 +39,6 @@ public class MobileBillsFragment extends Fragment {
     @BindView(R.id.txtFragPlanName) TextView txtFragPlanName;
     @BindView(R.id.txtFragMinsUsed) TextView txtFragMinsUsed;
     @BindView(R.id.txtFragBillAmount) TextView txtFragBillAmount;
-
-    private Mobile m;
 
     public MobileBillsFragment() {
         // Required empty public constructor
@@ -57,14 +53,12 @@ public class MobileBillsFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
-    {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         Intent mIntent = getActivity().getIntent();
         Bill billObj = mIntent.getParcelableExtra("Bills");
-        if(billObj.getBillId().contains("MB"))
-        {
-            //txtFragBillId.setText();
-        }
+        Mobile m = DataRepository.getInstance().getMobileBill(billObj.getBillId());
+        txtFragBillId.setText(m.getBillId());
+    }
 //        for(int i =0; i <bills.size(); i++)
 //        {
 //            if(bills.get(i).getBillId().contains("MB"))
@@ -104,4 +98,3 @@ public class MobileBillsFragment extends Fragment {
 //            }
 //        });
     }
-}

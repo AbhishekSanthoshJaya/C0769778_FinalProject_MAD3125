@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.ui.DetailedBillActivity;
+import com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.MobileBillsFragment;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;
@@ -59,9 +60,11 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
             @Override
             public void onClick(View v) {
                 Bill billObj = billArrayList.get(position);
-                Intent mIntent = new Intent(holder.itemView.getContext(), DetailedBillActivity.class);
-                mIntent.putExtra("Bills", billObj);
-                holder.itemView.getContext().startActivity(mIntent);
+                if(billObj.getBillId().contains("MB")) {
+                    Intent mIntent = new Intent(holder.itemView.getContext(), MobileBillsFragment.class);
+                    mIntent.putExtra("Bills", billObj);
+                    holder.itemView.getContext().startActivity(mIntent);
+                }
             }
         });
     }
