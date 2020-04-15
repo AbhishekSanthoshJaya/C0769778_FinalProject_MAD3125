@@ -20,15 +20,26 @@ import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class BillsFragment extends Fragment {
 
-    double totalAmount;
-
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
+
+    @BindView(R.id.txtFragBillId) TextView txtFragBillId;
+    @BindView(R.id.txtFragBillDate) TextView txtFragBillDate;
+    @BindView(R.id.txtFragDataUsed) TextView txtFragDataUsed;
+    @BindView(R.id.txtFragManufac) TextView txtFragManufac;
+    @BindView(R.id.txtFragPlanName) TextView txtFragPlanName;
+    @BindView(R.id.txtFragMinsUsed) TextView txtFragMinsUsed;
+    @BindView(R.id.txtFragBillAmount) TextView txtFragBillAmount;
 
     public BillsFragment() {
         // Required empty public constructor
@@ -37,22 +48,20 @@ public class BillsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_mobilebills, container, false);
+        View view = inflater.inflate(R.layout.fragment_mobilebills, container, false);
+        ButterKnife.bind(this,view);
+        return view;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
-//        super.onViewCreated(view, savedInstanceState);
-//        txtBillId = getView().findViewById(R.id.txtBillId);
-//        txtBillDate = getView().findViewById(R.id.txtBillDate);
-//        txtBillAmount = getView().findViewById(R.id.txtBillAmount);
-//        imgBillType = getView().findViewById(R.id.imgBillType);
-
         Intent mIntent = getActivity().getIntent();
         Bill billObj = mIntent.getParcelableExtra("Bills");
-
+        if(billObj.getBillId().contains("MB"))
+        {
+           // txtFragBillId.setText(billObj.get);
+        }
 //        for(int i =0; i <bills.size(); i++)
 //        {
 //            if(bills.get(i).getBillId().contains("MB"))

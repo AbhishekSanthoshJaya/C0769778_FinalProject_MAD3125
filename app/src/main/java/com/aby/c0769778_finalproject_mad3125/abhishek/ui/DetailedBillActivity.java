@@ -23,31 +23,11 @@ public class DetailedBillActivity extends AppCompatActivity {
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
-    private TextView txtTotalAmount;
-    private ImageView imgAddButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_billsview);
-
-        Intent mIntent = getIntent();
-        Customer customerObj = mIntent.getParcelableExtra("CustomerBills");
-
-        //ArrayList<Bill> bills = customerObj.getBills();
-
-        imgAddButton = findViewById(R.id.imgAddBill);
-        imgAddButton.setImageResource(R.drawable.addbillsicon);
-
-        imgAddButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mIntent = new Intent(DetailedBillActivity.this, AddNewBillActivity.class);
-                startActivity(mIntent);
-            }
-        });
-
-        txtTotalAmount.setText(HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();

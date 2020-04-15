@@ -61,7 +61,6 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
             @Override
             public void onClick(View v) {
                 Bill billObj = billArrayList.get(position);
-
                 Intent mIntent = new Intent(holder.itemView.getContext(), DetailedBillActivity.class);
                 mIntent.putExtra("Bills", billObj);
                 holder.itemView.getContext().startActivity(mIntent);

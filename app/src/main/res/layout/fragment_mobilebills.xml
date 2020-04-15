@@ -314,7 +314,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtBillId"
+        android:id="@+id/txtFragBillId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"
@@ -340,7 +340,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtBillDate"
+        android:id="@+id/txtFragBillDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"
@@ -366,7 +366,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txtBillAmount"
+        android:id="@+id/txtFragBillAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="245dp"

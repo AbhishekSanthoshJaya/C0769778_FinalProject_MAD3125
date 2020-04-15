@@ -5,11 +5,11 @@ import org.joda.time.LocalDate;
 
 public class Mobile extends Bill {
 
-    private String manufacturerName;
-    private String planName;
-    private String mobileNumber;
-    private Integer mobGbUsed;
-    private Integer minute;
+     String manufacturerName;
+     String planName;
+     String mobileNumber;
+     Integer mobGbUsed;
+     Integer minute;
 
     public Mobile(String billId, LocalDate billDate, BillType billType, String manufacturerName, String planName, String mobileNumber, Integer mobGbUsed, Integer minute){
         super(billId, billDate, billType);
