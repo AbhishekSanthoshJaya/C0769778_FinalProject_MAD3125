@@ -41,4 +41,13 @@ public class HelperMethods {
         Matcher matcher = pattern.matcher(s);
         return matcher.find();
     }
+
+    public boolean mobileValidation(String s)
+    {
+        if(s.length() == 10)
+        {
+            return true;
+        }
+        return false;
+    }
 }
