@@ -29,6 +29,7 @@ public class DetailedBillActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
+
         mFragmentManager = getSupportFragmentManager();
 
         if(billObj.getBillId().contains("MB")) {

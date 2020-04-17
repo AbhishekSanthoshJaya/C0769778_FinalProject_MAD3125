@@ -1,7 +1,10 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -26,6 +30,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.concurrent.Executor;
 
 public class LoginActivity extends AppCompatActivity {
     private TextInputEditText edtEmailIdText;
@@ -42,11 +47,59 @@ public class LoginActivity extends AppCompatActivity {
     private static final String PREF_USERNAME = "username";
     private static final String PREF_PASSWORD = "password";
 
+    private Executor executor;
+    private BiometricPrompt biometricPrompt;
+    private BiometricPrompt.PromptInfo promptInfo;
+    MediaPlayer mp;
+    Integer someflag = 1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AndroidThreeTen.init(this);
+
+        // BIOMETRIC CODE
+        executor = ContextCompat.getMainExecutor(this);
+        biometricPrompt = new BiometricPrompt(LoginActivity.this,
+                executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode,
+                                              @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                Toast.makeText(getApplicationContext(),
+                        "Authentication error: " + errString, Toast.LENGTH_SHORT)
+                        .show();
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(
+                    @NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                Toast.makeText(getApplicationContext(),
+                        "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+                successfulLogin();
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+                invalidFinger();
+            }
+        });
+
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Biometric login for my app")
+                .setSubtitle("Log in using your biometric credential")
+                .setNegativeButtonText("Use password")
+                .build();
+
+        // Prompt appears when user clicks "Log in".
+        // Consider integrating with the keystore to unlock cryptographic operations,
+        // if needed by your app.
+
+        // BIOMETRIC CODE END
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
@@ -63,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         editor = sharedPreferences.edit();
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.welcome);
+        mp = MediaPlayer.create(this, R.raw.welcome);
 
         String email = sharedPreferences.getString(PREF_USERNAME, null);
         String password = sharedPreferences.getString(PREF_PASSWORD, null);
@@ -115,23 +168,14 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putString(PREF_PASSWORD,"");
                             editor.apply();
                         }
-                        mp.start();
-                        Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
-                        startActivity(mIntent);
-                        return;
+                        if(someflag == 1) {
+                            biometricPrompt.authenticate(promptInfo);
+                            someflag = 0;
+                            return;
+                        }
+                        successfulLogin();
                     }
                 }
-                new MaterialAlertDialogBuilder(LoginActivity.this)
-                        .setTitle("Invalid username or password")
-                        .setMessage("Please check the information you entered")
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .show();
-                return;
             }
         });
     }
@@ -150,5 +194,42 @@ public class LoginActivity extends AppCompatActivity {
             return null;
         }
         return json;
+    }
+
+    public void successfulLogin()
+    {
+        mp.start();
+        Intent mIntent = new Intent(LoginActivity.this, CustomerListActivity.class);
+        startActivity(mIntent);
+        return;
+    }
+
+    public void invalidLogin()
+    {
+        new MaterialAlertDialogBuilder(LoginActivity.this)
+                        .setTitle("Invalid username or password")
+                        .setMessage("Please check the information you entered")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
+                return;
+    }
+    public void invalidFinger()
+    {
+        new MaterialAlertDialogBuilder(LoginActivity.this)
+                .setTitle("Invalid fingerprint")
+                .setMessage("Please try again")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+        return;
     }
 }
