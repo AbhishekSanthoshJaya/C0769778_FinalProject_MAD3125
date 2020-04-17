@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
@@ -39,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout edtPassword;
     private Button btnlogin;
     private Switch swchRememberMe;
+    private TextView txtAboutUs;
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -110,7 +112,15 @@ public class LoginActivity extends AppCompatActivity {
         swchRememberMe = findViewById(R.id.swchRememberMe);
         edtEmailId = findViewById(R.id.edtEmailId);
         edtPassword = findViewById(R.id.edtPassword);
+        txtAboutUs = findViewById(R.id.txtAboutUs);
 
+        txtAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(LoginActivity.this, AboutUsWebViewActivity.class);
+                startActivity(mIntent);
+            }
+        });
         ArrayList<String> emailList = new ArrayList<>();
         ArrayList<String> passwordList = new ArrayList<>();
 
@@ -174,6 +184,7 @@ public class LoginActivity extends AppCompatActivity {
                             return;
                         }
                         successfulLogin();
+                        someflag = 1;
                     }
                 }
             }
