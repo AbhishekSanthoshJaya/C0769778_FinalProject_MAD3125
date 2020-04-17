@@ -4,10 +4,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -16,6 +18,8 @@ import android.widget.RadioButton;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.DataRepository;
+import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -170,6 +174,22 @@ public class AddCustomerActivity extends AppCompatActivity {
         if(edtLocationText.getText().toString().isEmpty())
         {
             edtLocation.setError("Please enter your location");
+            someFlag = true;
+            return;
+        }
+        if(!HelperMethods.getInstance().emailValidation(edtEmailText.getText().toString()))
+        {
+            edtEmail.setError("Please enter a valid email address");
+            new MaterialAlertDialogBuilder(AddCustomerActivity.this)
+                    .setTitle("Invalid email address")
+                    .setMessage("Please check the email you entered")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
             someFlag = true;
             return;
         }

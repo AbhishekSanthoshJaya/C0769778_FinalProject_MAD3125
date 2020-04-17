@@ -7,6 +7,9 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class HelperMethods {
 
     private static HelperMethods repoObj = new HelperMethods();
@@ -30,5 +33,12 @@ public class HelperMethods {
     public void makeToast(String message, Context context)
     {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
+    public boolean emailValidation(String s) {
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(s);
+        return matcher.find();
     }
 }
