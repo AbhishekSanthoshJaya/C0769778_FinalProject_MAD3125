@@ -1,5 +1,6 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.AssetManager;
@@ -23,6 +24,9 @@ public class AboutUsWebViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_us_web_view);
 
         wvAboutUs = findViewById(R.id.wvAboutUs);
+
+        ActionBar mActionBar = getSupportActionBar();
+        mActionBar.hide();
 
         AssetManager assetManager = this.getAssets();
         try {

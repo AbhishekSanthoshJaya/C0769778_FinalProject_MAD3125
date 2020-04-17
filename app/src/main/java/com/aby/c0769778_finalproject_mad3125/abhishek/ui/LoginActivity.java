@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -114,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         txtAboutUs = findViewById(R.id.txtAboutUs);
 
+        txtAboutUs.setPaintFlags(txtAboutUs.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
         txtAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
