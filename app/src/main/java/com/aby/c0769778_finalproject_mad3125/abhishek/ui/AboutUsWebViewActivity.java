@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.aby.c0769778_finalproject_mad3125.R;
@@ -24,6 +25,11 @@ public class AboutUsWebViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about_us_web_view);
 
         wvAboutUs = findViewById(R.id.wvAboutUs);
+
+        wvAboutUs.getSettings().setDomStorageEnabled(true);
+        wvAboutUs.getSettings().setAppCacheEnabled(true);
+        wvAboutUs.getSettings().setLoadsImagesAutomatically(true);
+        wvAboutUs.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
