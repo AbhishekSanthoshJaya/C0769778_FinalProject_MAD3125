@@ -199,15 +199,56 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
             btnBillAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Hydro hObj = new Hydro   (edtBillIdText.getText().toString(),
-                            HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
-                            Bill.BillType.Hydro,
-                            edtAgencyNameText.getText().toString(),
-                            Integer.parseInt(edtUnitsUsedText.getText().toString()));
-                    customerObj2.getCustomerBills().put(hObj.getBillId(),hObj);
-                    Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
-                    mIntent.putExtra("CustomerBills", customerObj2);
-                    startActivity(mIntent);
+                    boolean someFlag = false;
+                    if(edtBillIdText.getText().toString().isEmpty())
+                    {
+                        edtBillIdText.setError("Please enter the bill ID");
+                        someFlag = true;
+                        return;
+                    }
+                    if(edtBillDateText.getText().toString().isEmpty()){
+                        edtBillDateText.setError("Please enter your the bill text");
+                        someFlag = true;
+                        return;
+                    }
+                    if(edtAgencyNameText.getText().toString().isEmpty())
+                    {
+                        edtNumberText.setError("Please enter the agency");
+                        someFlag = true;
+                        return;
+                    }
+                    if(edtUnitsUsedText.getText().toString().isEmpty())
+                    {
+                        edtDataUsedText.setError("Please enter the units used");
+                        someFlag = true;
+                        return;
+                    }
+                    if(!edtBillIdText.getText().toString().contains("HY"))
+                    {
+                        new MaterialAlertDialogBuilder(AddNewBillActivity.this)
+                                .setTitle("Invalid bill ID")
+                                .setMessage("Hydro bill IDs must contain HY")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
+                        someFlag = true;
+                        return;
+                    }
+                    if(!someFlag) {
+                        Hydro hObj = new Hydro(edtBillIdText.getText().toString(),
+                                HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
+                                Bill.BillType.Hydro,
+                                edtAgencyNameText.getText().toString(),
+                                Integer.parseInt(edtUnitsUsedText.getText().toString()));
+                        customerObj2.getCustomerBills().put(hObj.getBillId(), hObj);
+                        Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
+                        mIntent.putExtra("CustomerBills", customerObj2);
+                        startActivity(mIntent);
+                    }
                 }
             });
         }
@@ -223,6 +264,45 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
             btnBillAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    boolean someFlag = false;
+                    if(edtBillIdText.getText().toString().isEmpty())
+                    {
+                        edtBillIdText.setError("Please enter the bill ID");
+                        someFlag = true;
+                        return;
+                    }
+                    if(edtBillDateText.getText().toString().isEmpty()){
+                        edtBillDateText.setError("Please enter your the bill text");
+                        someFlag = true;
+                        return;
+                    }
+                    if(edtAgencyNameText.getText().toString().isEmpty())
+                    {
+                        edtNumberText.setError("Please enter the provider");
+                        someFlag = true;
+                        return;
+                    }
+                    if(edtUnitsUsedText.getText().toString().isEmpty())
+                    {
+                        edtDataUsedText.setError("Please enter the data used");
+                        someFlag = true;
+                        return;
+                    }
+                    if(!edtBillIdText.getText().toString().contains("IN"))
+                    {
+                        new MaterialAlertDialogBuilder(AddNewBillActivity.this)
+                                .setTitle("Invalid bill ID")
+                                .setMessage("Hydro bill IDs must contain IN")
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .show();
+                        someFlag = true;
+                        return;
+                    }
                     Internet iObj = new Internet   (edtBillIdText.getText().toString(),
                             HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
                             Bill.BillType.Hydro,
