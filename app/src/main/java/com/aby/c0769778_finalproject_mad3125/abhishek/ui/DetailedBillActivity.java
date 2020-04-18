@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
@@ -25,7 +27,7 @@ public class DetailedBillActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailed_billsview);
 
         Intent mIntent = getIntent();
-        Bill billObj = mIntent.getParcelableExtra("Bills");
+        Bill billObj = (Bill) mIntent.getSerializableExtra("BillObj");
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
@@ -39,14 +41,12 @@ public class DetailedBillActivity extends AppCompatActivity {
         }
         if(billObj.getBillId().contains("HY"))
         {
-            mFragmentManager = getSupportFragmentManager();
             mFragmentTransaction = mFragmentManager.beginTransaction();
             mFragmentTransaction.add(R.id.container, new HydroBillsFragment());
             mFragmentTransaction.commit();
         }
         if(billObj.getBillId().contains("IN"))
         {
-            mFragmentManager = getSupportFragmentManager();
             mFragmentTransaction = mFragmentManager.beginTransaction();
             mFragmentTransaction.add(R.id.container, new InternetFragment());
             mFragmentTransaction.commit();

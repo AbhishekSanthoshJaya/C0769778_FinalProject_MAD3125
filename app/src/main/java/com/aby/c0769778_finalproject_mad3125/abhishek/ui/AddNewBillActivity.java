@@ -61,7 +61,6 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     Customer customerObj2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

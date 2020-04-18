@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".abhishek.ui.PersonInformationEntryActivity">
+        tools:context=".abhishek.ui.DetailedBillActivity">
 
         <FrameLayout
             android:id="@+id/container"
@@ -40,6 +40,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <fragment
+            android:id="@+id/fragment4"
+            android:name="com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.InternetFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <fragment
+            android:id="@+id/fragment5"
+            android:name="com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.InternetFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

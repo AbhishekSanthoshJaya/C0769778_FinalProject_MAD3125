@@ -1,11 +1,13 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.adapters;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -62,8 +64,11 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
             {
                 Bill billObj = billArrayList.get(position);
                 Intent mIntent = new Intent(holder.itemView.getContext(), DetailedBillActivity.class);
-                mIntent.putExtra("Bills", billObj);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("BillObj", billObj);
+                mIntent.putExtras(bundle);
                 holder.itemView.getContext().startActivity(mIntent);
+               // mIntent.putExtra("BillObjectTransfer", billObj);
             }
         });
     }
