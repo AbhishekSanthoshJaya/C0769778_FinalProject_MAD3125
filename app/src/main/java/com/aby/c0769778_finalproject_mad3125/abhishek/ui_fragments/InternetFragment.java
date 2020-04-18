@@ -29,7 +29,7 @@ public class InternetFragment extends Fragment {
         Bundle bundle = new Bundle();
         try
         {
-            fragBillObj = (Bill) bundle.getSerializable("billDetailsObj");
+            fragBillObj = (Bill) bundle.getSerializable("billDetailsObj3");
         }
         catch (NullPointerException e)
         {

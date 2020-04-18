@@ -30,7 +30,7 @@ public class HydroBillsFragment extends Fragment {
         Bundle bundle = new Bundle();
         try
         {
-            fragBillObj = (Bill) bundle.getSerializable("billDetailsObj");
+            fragBillObj = (Bill) bundle.getSerializable("billDetailsObj2");
         }
         catch (NullPointerException e)
         {

@@ -54,7 +54,7 @@ public class DetailedBillActivity extends AppCompatActivity {
                 {
                     HydroBillsFragment mFragment = new HydroBillsFragment();
                     Bundle bundle = new Bundle();
-                    bundle.putSerializable("billDetailsObj", billObj);
+                    bundle.putSerializable("billDetailsObj2", billObj);
                     mFragment.setArguments(bundle);
                     mFragmentManager = getSupportFragmentManager();
                     mFragmentTransaction = mFragmentManager.beginTransaction();
@@ -66,7 +66,7 @@ public class DetailedBillActivity extends AppCompatActivity {
                 {
                     InternetFragment mFragment = new InternetFragment();
                     Bundle bundle = new Bundle();
-                    bundle.putSerializable("billDetailsObj", billObj);
+                    bundle.putSerializable("billDetailsObj3", billObj);
                     mFragment.setArguments(bundle);
                     mFragmentManager = getSupportFragmentManager();
                     mFragmentTransaction = mFragmentManager.beginTransaction();
