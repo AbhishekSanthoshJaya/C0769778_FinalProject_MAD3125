@@ -34,22 +34,22 @@ public class DetailedBillActivity extends AppCompatActivity {
 
         mFragmentManager = getSupportFragmentManager();
 
-        if(billObj.getBillId().contains("MB")) {
+      // if(billObj.getBillId().contains("MB")) {
             mFragmentTransaction = mFragmentManager.beginTransaction();
-            mFragmentTransaction.add(R.id.container, new MobileBillsFragment());
+            mFragmentTransaction.add(R.id.container_mob, new MobileBillsFragment());
             mFragmentTransaction.commit();
-        }
-        if(billObj.getBillId().contains("HY"))
-        {
-            mFragmentTransaction = mFragmentManager.beginTransaction();
-            mFragmentTransaction.add(R.id.container, new HydroBillsFragment());
-            mFragmentTransaction.commit();
-        }
-        if(billObj.getBillId().contains("IN"))
-        {
-            mFragmentTransaction = mFragmentManager.beginTransaction();
-            mFragmentTransaction.add(R.id.container, new InternetFragment());
-            mFragmentTransaction.commit();
-        }
+        //}
+       // if(billObj.getBillId().contains("HY"))
+       // {
+//            mFragmentTransaction = mFragmentManager.beginTransaction();
+//            mFragmentTransaction.add(R.id.container_hyd, new HydroBillsFragment());
+//            mFragmentTransaction.commit();
+       // }
+       // if(billObj.getBillId().contains("IN"))
+        //{
+//            mFragmentTransaction = mFragmentManager.beginTransaction();
+//            mFragmentTransaction.add(R.id.container_int, new InternetFragment());
+//            mFragmentTransaction.commit();
+       // }
     }
 }
