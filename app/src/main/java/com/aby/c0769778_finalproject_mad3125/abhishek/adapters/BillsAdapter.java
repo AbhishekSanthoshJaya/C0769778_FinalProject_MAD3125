@@ -68,7 +68,6 @@ public class BillsAdapter extends RecyclerView.Adapter<BillsAdapter.BillsViewHol
                 bundle.putSerializable("BillObj", billObj);
                 mIntent.putExtras(bundle);
                 holder.itemView.getContext().startActivity(mIntent);
-               // mIntent.putExtra("BillObjectTransfer", billObj);
             }
         });
     }

@@ -2,6 +2,7 @@ package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -33,23 +34,25 @@ public class DetailedBillActivity extends AppCompatActivity {
         mActionBar.hide();
 
         mFragmentManager = getSupportFragmentManager();
+        mFragmentTransaction = mFragmentManager.beginTransaction();
+        Fragment mFragment;
 
-      // if(billObj.getBillId().contains("MB")) {
-            mFragmentTransaction = mFragmentManager.beginTransaction();
-            mFragmentTransaction.add(R.id.container_mob, new MobileBillsFragment());
-            mFragmentTransaction.commit();
-        //}
-       // if(billObj.getBillId().contains("HY"))
-       // {
-//            mFragmentTransaction = mFragmentManager.beginTransaction();
-//            mFragmentTransaction.add(R.id.container_hyd, new HydroBillsFragment());
-//            mFragmentTransaction.commit();
-       // }
-       // if(billObj.getBillId().contains("IN"))
-        //{
-//            mFragmentTransaction = mFragmentManager.beginTransaction();
-//            mFragmentTransaction.add(R.id.container_int, new InternetFragment());
-//            mFragmentTransaction.commit();
-       // }
+           if(billObj.getBillId().contains("MB"))
+            {
+                mFragment = new MobileBillsFragment();
+                mFragmentTransaction.replace(R.id.container_mob, mFragment);
+            }
+            if(billObj.getBillId().contains("HY"))
+            {
+               mFragment = new HydroBillsFragment();
+               mFragmentTransaction.replace(R.id.container_hyd, mFragment);
+            }
+            if(billObj.getBillId().contains("IN"))
+            {
+                mFragment = new InternetFragment();
+                mFragmentTransaction.replace(R.id.container_int, mFragment);
+            }
+
+        mFragmentTransaction.commit();
     }
 }
