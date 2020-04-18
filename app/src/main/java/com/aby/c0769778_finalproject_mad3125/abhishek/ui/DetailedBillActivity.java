@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
@@ -21,6 +22,7 @@ public class DetailedBillActivity extends AppCompatActivity {
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
+    Bill billObj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,30 +30,46 @@ public class DetailedBillActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailed_billsview);
 
         Intent mIntent = getIntent();
-        Bill billObj = (Bill) mIntent.getSerializableExtra("BillObj");
+        billObj = (Bill) mIntent.getSerializableExtra("BillObj");
 
         ActionBar mActionBar = getSupportActionBar();
         mActionBar.hide();
 
-        mFragmentManager = getSupportFragmentManager();
-        mFragmentTransaction = mFragmentManager.beginTransaction();
-        Fragment mFragment = null;
+        TextView txtHeading = findViewById(R.id.txtHeading);
+        txtHeading.setText("DETAILED BILL VIEW");
 
            if(billObj.getBillId().contains("MB"))
                 {
-                    mFragment = new MobileBillsFragment();
+                    MobileBillsFragment mFragment = new MobileBillsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("billDetailsObj", billObj);
+                    mFragment.setArguments(bundle);
+                    mFragmentManager = getSupportFragmentManager();
+                    mFragmentTransaction = mFragmentManager.beginTransaction();
                     mFragmentTransaction.replace(R.id.container_mob, mFragment);
                     mFragmentTransaction.commit();
                 }
+
             if(billObj.getBillId().contains("HY"))
                 {
-                    mFragment = new HydroBillsFragment();
+                    HydroBillsFragment mFragment = new HydroBillsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("billDetailsObj", billObj);
+                    mFragment.setArguments(bundle);
+                    mFragmentManager = getSupportFragmentManager();
+                    mFragmentTransaction = mFragmentManager.beginTransaction();
                     mFragmentTransaction.replace(R.id.container_hyd, mFragment);
                     mFragmentTransaction.commit();
                 }
+
             if(billObj.getBillId().contains("IN"))
                 {
-                    mFragment = new InternetFragment();
+                    InternetFragment mFragment = new InternetFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("billDetailsObj", billObj);
+                    mFragment.setArguments(bundle);
+                    mFragmentManager = getSupportFragmentManager();
+                    mFragmentTransaction = mFragmentManager.beginTransaction();
                     mFragmentTransaction.replace(R.id.container_int, mFragment);
                     mFragmentTransaction.commit();
                 }

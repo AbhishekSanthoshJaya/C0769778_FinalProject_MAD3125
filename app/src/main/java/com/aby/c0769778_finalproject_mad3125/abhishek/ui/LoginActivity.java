@@ -56,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
     MediaPlayer mp;
     Integer someflag = 1;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

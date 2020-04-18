@@ -9,11 +9,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
@@ -39,14 +41,24 @@ public class MobileBillsFragment extends Fragment {
     @BindView(R.id.txtFragPlanName) TextView txtFragPlanName;
     @BindView(R.id.txtFragMinsUsed) TextView txtFragMinsUsed;
     @BindView(R.id.txtFragBillAmount) TextView txtFragBillAmount;
+    private Bill fragBillObj;
 
-    public MobileBillsFragment() {
-        // Required empty public constructor
-    }
+    public MobileBillsFragment() { }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
+        Bundle bundle = getArguments();
+       try
+           {
+               fragBillObj = (Bill) bundle.getSerializable("billDetailsObj");
+           }
+       catch (NullPointerException e)
+          {
+                Toast.makeText(getActivity(), "Sorry boy, still mobile null", Toast.LENGTH_SHORT).show();
+          }
+
         View view = inflater.inflate(R.layout.fragment_mobilebills, container, false);
         ButterKnife.bind(this,view);
         return view;
@@ -54,8 +66,8 @@ public class MobileBillsFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-       // Mobile m = DataRepository.getInstance().getMobileBill(billObj.getBillId());
-        //txtFragBillId.setText(m.getBillId());
+//        Mobile m = DataRepository.getInstance().getMobileBill(fragBillObj.getBillId());
+//        txtFragBillId.setText(m.getBillId());
     }
 //        for(int i =0; i <bills.size(); i++)
 //        {
