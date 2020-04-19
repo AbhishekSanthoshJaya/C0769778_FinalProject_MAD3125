@@ -94,7 +94,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+            app:startIconDrawable="@android:drawable/ic_menu_help">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtUnitsUsedText"
@@ -338,7 +338,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@android:drawable/ic_menu_view">
+            app:startIconDrawable="?attr/actionModePasteDrawable">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtManufacNameText"
@@ -373,7 +373,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+            app:startIconDrawable="@android:drawable/ic_menu_report_image">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtPlanNameText"

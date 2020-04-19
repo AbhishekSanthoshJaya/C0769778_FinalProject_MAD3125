@@ -45,6 +45,7 @@ public class DetailedBillActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detailed_bill);
         ButterKnife.bind(this);
 
+        btnHome.setVisibility(View.INVISIBLE);
         ActionBar mAction = getSupportActionBar();
         mAction.setTitle("Detailed Bill View");
 

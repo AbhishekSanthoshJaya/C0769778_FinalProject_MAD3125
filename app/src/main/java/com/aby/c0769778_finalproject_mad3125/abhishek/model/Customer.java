@@ -3,6 +3,7 @@ package com.aby.c0769778_finalproject_mad3125.abhishek.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -18,7 +19,7 @@ public class Customer implements Parcelable {
     private String password;
     private String location;
     private String dateOfBirth;
-    private HashMap<String, Bill> customerBillsHashMap = new HashMap<String, Bill>();
+    private HashMap<String, Bill> customerBillsHashMap = new HashMap<>();
     private Double allTotal;
     private int customerImg;
 
@@ -26,14 +27,10 @@ public class Customer implements Parcelable {
         return gender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getGenderLetter()
-    {
-        return getGender().substring(0,1).toUpperCase();
-    }
+        {
+            return getGender().substring(0,1).toUpperCase();
+        }
 
     protected Customer(Parcel in) {
         customerId = in.readString();
@@ -93,16 +90,8 @@ public class Customer implements Parcelable {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public void addBill(String billId, Bill bill)
@@ -114,64 +103,24 @@ public class Customer implements Parcelable {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getLocation() {
         return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public HashMap<String, Bill> getCustomerBills() {
         return customerBillsHashMap;
-    }
-
-    public void setCustomerBills(HashMap<String, Bill> customerBills) {
-        this.customerBillsHashMap = customerBills;
-    }
-
-    public Double getAllTotal() {
-        return allTotal;
-    }
-
-    public void setAllTotal(Double allTotal) {
-        this.allTotal = allTotal;
     }
 
     @Override

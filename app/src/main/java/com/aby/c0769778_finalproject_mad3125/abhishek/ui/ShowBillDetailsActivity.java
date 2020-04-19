@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class ShowBillDetailsActivity extends AppCompatActivity {
 
     private RecyclerView rvBillsList;
-    public static ArrayList<Bill> billsArrayListDetail = new ArrayList<>();
+    private ArrayList<Bill> billsArrayListDetail;
     private BillsAdapter billsAdapter;
     private ImageView imgAddButton;
     private TextView txtTotalAmountValue;
@@ -47,15 +47,15 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
 
         if(!billsArrayListDetail.isEmpty())
             {
-            txtTotalAmountValue.setText("YOUR TOTAL IS " + HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
+                txtTotalAmountValue.setText("YOUR TOTAL IS " + HelperMethods.getInstance().doubleFormatter(customerObj.getTotalAmount()));
             }
         else
-        {
-            txtTotalAmountValue.setText("NO BILLS TO DISPLAY");
-        }
+            {
+                txtTotalAmountValue.setText("NO BILLS TO DISPLAY");
+            }
 
         rvBillsList = findViewById(R.id.rvBillsList);
-        billsAdapter = new BillsAdapter(this.billsArrayListDetail);
+        billsAdapter = new BillsAdapter(billsArrayListDetail);
 
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -94,8 +94,8 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public ArrayList<Bill> getBillsArrayList()
-    {
-        return this.billsArrayListDetail;
+    @Override
+    public void onBackPressed() {
+        return;
     }
 }

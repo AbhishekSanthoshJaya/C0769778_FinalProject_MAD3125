@@ -38,7 +38,6 @@ public class CustomerListActivity extends AppCompatActivity {
     private RecyclerView rvCustomerList;
     private ArrayList customerArrayList;
     private ArrayList tempCustomerArrayList;
-    private ArrayList<Customer> tempCustomerListArrayList;
     private CustomerAdapter customerAdapter;
     private ImageView barAddCustomer;
     private ImageView barLogout;

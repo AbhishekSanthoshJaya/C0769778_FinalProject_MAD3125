@@ -7,7 +7,6 @@ import com.aby.c0769778_finalproject_mad3125.abhishek.model.Hydro;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Internet;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -19,7 +18,6 @@ public class DataRepository {
     }
     private DataRepository() { }
     private HashMap<String, Customer> customerMap = new HashMap<>();
-    private ArrayList<Customer> customerDataList = new ArrayList<>();
     private ArrayList<Mobile> mobileBills = new ArrayList<>();
     private ArrayList<Hydro> hydroBills = new ArrayList<>();
     private ArrayList<Internet> internetBills = new ArrayList<>();
@@ -28,45 +26,16 @@ public class DataRepository {
         return this.customerMap;
     }
 
-    public void setCustomerDataList(ArrayList customerDataList) {
-        this.customerDataList = customerDataList;
-    }
-
-    public ArrayList getCustomerDataList() {
-        return customerDataList;
-    }
-
-    public Mobile getMobileBill(String billId) {
-        for(Mobile mb : this.mobileBills)
-            {
-                if(mb.getBillId() == billId)
-                {
-                    return mb;
-                }
-            }
-        return null;
-        }
-
-    public Hydro getHydroBill(String billId) {
-        for(Hydro hb : this.hydroBills)
-        {
-            if(hb.getBillId() == billId)
-            {
-                return hb;
-            }
-        }
-        return null;
-    }
-    public Internet getInternetBill(String billId) {
-        for(Internet ib : this.internetBills)
-        {
-            if(ib.getBillId() == billId)
-            {
-                return ib;
-            }
-        }
-        return null;
-    }
+//    public Mobile getMobileBill(String billId) {
+//        for(Mobile mb : this.mobileBills)
+//            {
+//                if(mb.getBillId() == billId)
+//                {
+//                    return mb;
+//                }
+//            }
+//        return null;
+//        }
 
     public void loadData() {
         Customer c1 = new Customer("ID001",
@@ -150,6 +119,7 @@ public class DataRepository {
         c1.addBill("MB100", m1);
         c1.addBill("HY100", h1);
         c1.addBill("IN200", in2);
+        c2.addBill("IN200", in2);
         mobileBills.add(m1);
         hydroBills.add(h1);
         internetBills.add(in1);
