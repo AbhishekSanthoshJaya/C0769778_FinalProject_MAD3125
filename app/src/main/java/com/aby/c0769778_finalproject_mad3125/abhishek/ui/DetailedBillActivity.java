@@ -35,6 +35,7 @@ public class DetailedBillActivity extends AppCompatActivity {
     @BindView(R.id.text5) TextView text5;
     @BindView(R.id.text6) TextView text6;
     @BindView(R.id.text7) TextView text7;
+    @BindView(R.id.textBillType) TextView textBillType;
     @BindView(R.id.btnHome) Button btnHome;
     Bill billObj;
 
@@ -65,6 +66,7 @@ public class DetailedBillActivity extends AppCompatActivity {
             txtFragMinsUsed.setVisibility(View.VISIBLE);
             text4.setText("Manufacturer");
             text5.setText("Plan Name");
+            textBillType.setText("YOUR MOBILE BILL");
         }
         if(billObj.getBillId().contains("HY"))
         {
@@ -77,6 +79,7 @@ public class DetailedBillActivity extends AppCompatActivity {
             imgBillType.setImageResource(R.drawable.watericon);
             text4.setText("Agency Name");
             text5.setText("Units Used");
+            textBillType.setText("YOUR HYDRO BILL");
             removeFields();
         }
         if(billObj.getBillId().contains("IN"))
@@ -90,6 +93,7 @@ public class DetailedBillActivity extends AppCompatActivity {
             imgBillType.setImageResource(R.drawable.interneticon);
             text4.setText("Provider Name");
             text5.setText("Data Used");
+            textBillType.setText("YOUR INTERNET BILL");
             removeFields();
         }
 
