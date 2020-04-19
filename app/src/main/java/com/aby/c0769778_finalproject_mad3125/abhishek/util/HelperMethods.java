@@ -50,4 +50,15 @@ public class HelperMethods {
         }
         return false;
     }
+
+    public String gbFormatter(Integer s)
+    {
+        return s + " GB";
+    }
+
+    public String minsFormatter(String s)
+    {
+        return s + " MINS";
+    }
+
 }

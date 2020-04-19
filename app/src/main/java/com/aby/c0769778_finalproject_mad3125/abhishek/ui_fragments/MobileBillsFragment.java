@@ -1,32 +1,19 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
-import com.aby.c0769778_finalproject_mad3125.abhishek.model.Customer;
-import com.aby.c0769778_finalproject_mad3125.abhishek.model.Mobile;
-import com.aby.c0769778_finalproject_mad3125.abhishek.util.DataRepository;
-import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,13 +21,13 @@ import butterknife.ButterKnife;
 
 public class MobileBillsFragment extends Fragment {
 
-    @BindView(R.id.txtFragBillId) TextView txtFragBillId;
-    @BindView(R.id.txtFragBillDate) TextView txtFragBillDate;
-    @BindView(R.id.txtFragDataUsed) TextView txtFragDataUsed;
-    @BindView(R.id.txtFragManufac) TextView txtFragManufac;
-    @BindView(R.id.txtFragPlanName) TextView txtFragPlanName;
-    @BindView(R.id.txtFragMinsUsed) TextView txtFragMinsUsed;
-    @BindView(R.id.txtFragBillAmount) TextView txtFragBillAmount;
+//    @BindView(R.id.txtFragBillId) TextView txtFragBillId;
+//    @BindView(R.id.txtFragBillDate) TextView txtFragBillDate;
+//    @BindView(R.id.txtFragDataUsed) TextView txtFragDataUsed;
+//    @BindView(R.id.txtFragManufac) TextView txtFragManufac;
+//    @BindView(R.id.txtFragPlanName) TextView txtFragPlanName;
+//    @BindView(R.id.txtFragMinsUsed) TextView txtFragMinsUsed;
+//    @BindView(R.id.txtFragBillAmount) TextView txtFragBillAmount;
     private Bill fragBillObj;
 
     public MobileBillsFragment() { }
@@ -49,7 +36,8 @@ public class MobileBillsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        Bundle bundle = getArguments();
+
+       Bundle bundle = getArguments();
        try
            {
                fragBillObj = (Bill) bundle.getSerializable("billDetailsObj");
@@ -68,6 +56,7 @@ public class MobileBillsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 //        Mobile m = DataRepository.getInstance().getMobileBill(fragBillObj.getBillId());
 //        txtFragBillId.setText(m.getBillId());
+
     }
 //        for(int i =0; i <bills.size(); i++)
 //        {

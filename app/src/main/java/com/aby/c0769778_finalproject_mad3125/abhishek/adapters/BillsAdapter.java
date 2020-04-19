@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aby.c0769778_finalproject_mad3125.R;
 import com.aby.c0769778_finalproject_mad3125.abhishek.model.Bill;
 import com.aby.c0769778_finalproject_mad3125.abhishek.ui.DetailedBillActivity;
-import com.aby.c0769778_finalproject_mad3125.abhishek.ui_fragments.MobileBillsFragment;
+import com.aby.c0769778_finalproject_mad3125.abhishek.ui.DetailedBillFragmentActivity;
 import com.aby.c0769778_finalproject_mad3125.abhishek.util.HelperMethods;
 
 import java.util.ArrayList;

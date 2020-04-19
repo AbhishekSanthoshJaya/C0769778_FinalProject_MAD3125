@@ -37,7 +37,7 @@ public class DataRepository {
     }
 
     public Mobile getMobileBill(String billId) {
-        for(Mobile mb : mobileBills)
+        for(Mobile mb : this.mobileBills)
             {
                 if(mb.getBillId() == billId)
                 {
@@ -48,7 +48,7 @@ public class DataRepository {
         }
 
     public Hydro getHydroBill(String billId) {
-        for(Hydro hb : hydroBills)
+        for(Hydro hb : this.hydroBills)
         {
             if(hb.getBillId() == billId)
             {
@@ -58,7 +58,7 @@ public class DataRepository {
         return null;
     }
     public Internet getInternetBill(String billId) {
-        for(Internet ib : internetBills)
+        for(Internet ib : this.internetBills)
         {
             if(ib.getBillId() == billId)
             {
