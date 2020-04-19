@@ -304,7 +304,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                     }
                     Internet iObj = new Internet   (edtBillIdText.getText().toString(),
                             HelperMethods.getInstance().stringToDate(edtBillDateText.getText().toString()),
-                            Bill.BillType.Hydro,
+                            Bill.BillType.Internet,
                             edtAgencyNameText.getText().toString(),
                             Double.parseDouble(edtUnitsUsedText.getText().toString()));
                     customerObj2.getCustomerBills().put(iObj.getBillId(),iObj);

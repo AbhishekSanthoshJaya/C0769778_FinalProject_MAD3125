@@ -205,6 +205,8 @@ public class AddCustomerActivity extends AppCompatActivity {
                     edtBirthDateText.getText().toString(),
                     R.drawable.icon_newuser);
             DataRepository.getInstance().getCustomerMap().put(customer.getCustomerId(), customer);
+            LoginActivity.emailList.add(edtEmailText.getText().toString());
+            LoginActivity.passwordList.add(edtPasswordText.getText().toString());
             Intent mIntent = new Intent(AddCustomerActivity.this, CustomerListActivity.class);
             mIntent.putExtra("CustomerBills", customer);
             startActivity(mIntent);

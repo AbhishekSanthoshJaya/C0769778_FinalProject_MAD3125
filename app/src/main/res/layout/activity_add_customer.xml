@@ -355,6 +355,7 @@
                 android:cursorVisible="true"
                 android:fontFamily="@font/acme"
                 android:hint="ENTER PASSWORD"
+                android:inputType="textPassword"
                 android:textColor="#050000"
                 android:textColorHint="#050000"
                 android:textSize="18sp" />

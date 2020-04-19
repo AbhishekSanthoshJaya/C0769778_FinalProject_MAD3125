@@ -42,7 +42,8 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnlogin;
     private Switch swchRememberMe;
     private TextView txtAboutUs;
-
+    public static ArrayList<String> emailList = new ArrayList<>();
+    public static ArrayList<String> passwordList = new ArrayList<>();
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -122,9 +123,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(mIntent);
             }
         });
-        ArrayList<String> emailList = new ArrayList<>();
-        ArrayList<String> passwordList = new ArrayList<>();
-
         sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         editor = sharedPreferences.edit();
         mp = MediaPlayer.create(this, R.raw.welcome);
@@ -186,8 +184,10 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         successfulLogin();
                         someflag = 1;
+                        return;
                     }
                 }
+                invalidLogin();
             }
         });
     }
