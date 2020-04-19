@@ -210,15 +210,15 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                         someFlag = true;
                         return;
                     }
-                    if(edtAgencyNameText.getText().toString().isEmpty())
+                    if(edtUnitsUsedText.getText().toString().isEmpty())
                     {
-                        edtNumberText.setError("Please enter the agency");
+                        edtUnitsUsedText.setError("Please enter the units used");
                         someFlag = true;
                         return;
                     }
-                    if(edtUnitsUsedText.getText().toString().isEmpty())
+                    if(edtAgencyNameText.getText().toString().isEmpty())
                     {
-                        edtDataUsedText.setError("Please enter the units used");
+                        edtAgencyNameText.setError("Please enter the agency");
                         someFlag = true;
                         return;
                     }
@@ -277,7 +277,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                     }
                     if(edtAgencyNameText.getText().toString().isEmpty())
                     {
-                        edtNumberText.setError("Please enter the provider");
+                        edtAgencyNameText.setError("Please enter the provider");
                         someFlag = true;
                         return;
                     }

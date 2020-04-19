@@ -98,10 +98,6 @@ public class LoginActivity extends AppCompatActivity {
                 .setNegativeButtonText("Use password")
                 .build();
 
-        // Prompt appears when user clicks "Log in".
-        // Consider integrating with the keystore to unlock cryptographic operations,
-        // if needed by your app.
-
         // BIOMETRIC CODE END
 
         ActionBar mActionBar = getSupportActionBar();
