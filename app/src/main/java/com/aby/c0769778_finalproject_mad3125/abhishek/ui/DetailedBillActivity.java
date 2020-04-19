@@ -1,11 +1,13 @@
 package com.aby.c0769778_finalproject_mad3125.abhishek.ui;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.DragStartHelper;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +35,7 @@ public class DetailedBillActivity extends AppCompatActivity {
     @BindView(R.id.text5) TextView text5;
     @BindView(R.id.text6) TextView text6;
     @BindView(R.id.text7) TextView text7;
+    @BindView(R.id.btnHome) Button btnHome;
     Bill billObj;
 
     @Override
@@ -40,6 +43,9 @@ public class DetailedBillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_bill);
         ButterKnife.bind(this);
+
+        ActionBar mAction = getSupportActionBar();
+        mAction.setTitle("Detailed Bill View");
 
         Intent mIntent = getIntent();
         billObj = (Bill) mIntent.getSerializableExtra("BillObj");
@@ -86,6 +92,14 @@ public class DetailedBillActivity extends AppCompatActivity {
             text5.setText("Data Used");
             removeFields();
         }
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(DetailedBillActivity.this, CustomerListActivity.class);
+                startActivity(mIntent);
+            }
+        });
     }
 
     public void removeFields()
