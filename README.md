@@ -24,7 +24,7 @@ Screenshot | Description
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/custom15.png" alt="customerList"/> | List of customers shown in recycler view. Action bar buttons allow you to login and add a customer. Add customer button also added in the right corner.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/custom14.png" alt="customerAddition"/> | Customer addition form. Fields cannot be left empty.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/emailv10.png" alt="invalidEmail"/> | Email validation done with regex.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/newlya10.png" alt="newcustomer"/> | Newly added customer is not present in the customer list. You can also login with the username and password.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/newlya10.png" alt="newcustomer"/> | Newly added customer is now present in the customer list. You can also login with the new username and password.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/billsv10.png" alt="billslist"/> | Clicking on a customer gives you an overview of his bills and the total amount to be paid.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/custom16.png" alt="emptybills"/> | Clicking on a customer without any bills displays the no bills text. You can add bills and logout using the menu.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/bill_a10.png" alt="newbill"/> | Adding a new bill to a customer. Spinner is used to select the bill type. Fields cannot be left empty.
@@ -41,9 +41,10 @@ Screenshot | Description
 * [JournalDev.com](https://www.journaldev.com/14748/android-textinputlayout-example) - Used in designing TextInputLayouts
 * [Medium.com](https://medium.com/viithiisys/android-perfect-way-to-create-splash-screen-ca3c5bee137f) - Creating a splash screen
 * [Thecodeexpo.com](https://thecodeexpo.blogspot.com/2018/09/login-screen-remember-me-example.html) - Implementing remember me switch using shared preferences
-* [Develop.android.com](https://developer.android.com/guide/topics/ui/layout/recyclerview) - Working with recycler views
+* [Developer.android.com](https://developer.android.com/guide/topics/ui/layout/recyclerview) - Working with recycler views
 * [HowtoDoinJava.com](https://howtodoinjava.com/regex/java-regex-validate-email-address/) - Email validation regex
 * [Sitepoint.com](https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/) - Implementing parcelable transfer
 * [Youtube.com](https://www.youtube.com/watch?v=hwe1abDO2Ag) - Creating a datePicker
 * [Stackoverflow.com](https://stackoverflow.com/questions/3646415/how-to-create-edittext-with-rounded-corners) - Creating custom textboxes
 * [Joda.org](https://www.joda.org/joda-time/index.html) - Working with Joda-Time
+* [Developer.android.com](https://developer.android.com/guide/webapps/webview#kotlin) - Working with webviews.
