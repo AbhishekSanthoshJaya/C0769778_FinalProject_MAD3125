@@ -16,8 +16,8 @@ Final project: A program that calculates the total bills of a customer. A bill c
 ## PROJECT OUTPUT
 Screenshot | Description
 --- | ---
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/screen11.png" alt="splashscreen" width="800" height="600"/> | Custom splash screen that lasts for 5 seconds
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/logins10.png" alt="login" width="800" height="600"/> | Login Screen. Added custom text fields with icons and toggle password feature. User information is read from a json file. Hints and errors are added as well along with a remember me switch.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/splash12.png" alt="splashscreen" width="800" height="600"/> | Custom splash screen that lasts for 5 seconds
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/login_10.png" alt="login" width="800" height="600"/> | Login Screen. Added custom text fields with icons and toggle password feature. User information is read from a json file. Hints and errors are added as well along with a remember me switch.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/webvie10.png" alt="aboutus" width="800" height="600"/> | About us page done using webview. Webview activity is also the Kotlin class.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/biomet10.png" alt="biometric" width="800" height="600"/> | Added biometric login option. Also gives the standard password login option.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/invali10.png" alt="invalid_login" width="800" height="600"/> | Error displayed when login credentials are not valid.
