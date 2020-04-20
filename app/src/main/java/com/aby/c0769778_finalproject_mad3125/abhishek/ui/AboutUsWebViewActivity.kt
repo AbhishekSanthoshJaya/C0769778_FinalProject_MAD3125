@@ -15,8 +15,9 @@ class AboutUsWebViewActivity : AppCompatActivity() {
 
         val myWebView: WebView = findViewById(R.id.wvAboutUs)
 
-        val mActionBar = supportActionBar
-        mActionBar!!.hide()
+        val mAction = supportActionBar
+        mAction!!.title = "ABOUT US"
+
         val assetManager = this.assets
 
         try {

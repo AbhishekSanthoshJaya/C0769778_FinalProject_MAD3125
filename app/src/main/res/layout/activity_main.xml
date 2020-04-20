@@ -37,11 +37,12 @@
             android:id="@+id/edtEmailIdText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/rounded_edittext"
+            android:background="@color/colorPrimary"
             android:cursorVisible="true"
             android:hint="Enter your email"
             android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHint="#FFFFFF"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -74,13 +75,14 @@
             android:id="@+id/edtPasswordText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/rounded_edittext"
+            android:background="@color/colorPrimary"
             android:cursorVisible="true"
             android:drawableLeft="@android:drawable/ic_lock_idle_lock"
             android:hint="Enter your password"
             android:inputType="textPassword"
             android:textColor="#FFFFFF"
-            android:textColorHint="#000000" />
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView

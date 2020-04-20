@@ -85,10 +85,6 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
                 Intent addBill = new Intent(ShowBillDetailsActivity.this, AddNewBillActivity.class);
                 startActivity(addBill);
                 break;
-            case R.id.mnuLogout:
-                Intent logoutIntent = new Intent(ShowBillDetailsActivity.this, LoginActivity.class);
-                startActivity(logoutIntent);
-                break;
         }
         return super.onOptionsItemSelected(item);
     }
