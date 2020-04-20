@@ -33,7 +33,7 @@ Screenshot | Description
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/detail20.png" alt="detailedbill"/> | Clicking on a bill shows all the information for that particular bill.
 
 ## AGILE USED
-[Click here for GITSCRUM link](https://gitscrum.com/abysztech/c0769778-w2020-mad3125-fp)
+[Click here for GITSCRUM link](https://gitscrum.com/bp/5e9e09982d9c1)
 
 ## REFERENCES 
 * [Android.jlelse.eu](https://android.jlelse.eu/material-design-for-android-523996401fc1) - Used for material design implementation
