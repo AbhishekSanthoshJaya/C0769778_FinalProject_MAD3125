@@ -16,21 +16,21 @@ Final project: A program that calculates the total bills of a customer. A bill c
 ## PROJECT OUTPUT
 Screenshot | Description
 --- | ---
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/screen11.png" alt="splashscreen"/> | Custom splash screen that lasts for 5 seconds
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/logins10.png" alt="login"/> | Login Screen. Added custom text fields with icons and toggle password feature. User information is read from a json file. Hints and errors are added as well along with a remember me switch.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/webvie10.png" alt="aboutus"/> | About us page done using webview. Webview activity is also the Kotlin class.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/biomet10.png" alt="biometric"/> | Added biometric login option. Also gives the standard password login option.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/invali10.png" alt="invalid_login"/> | Error displayed when login credentials are not valid.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/custom15.png" alt="customerList"/> | List of customers shown in recycler view. Action bar buttons allow you to login and add a customer. Add customer button also added in the right corner.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/custom14.png" alt="customerAddition"/> | Customer addition form. Fields cannot be left empty.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/emailv10.png" alt="invalidEmail"/> | Email validation done with regex.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/newlya10.png" alt="newcustomer"/> | Newly added customer is now present in the customer list. You can also login with the new username and password.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/billsv10.png" alt="billslist"/> | Clicking on a customer gives you an overview of his bills and the total amount to be paid.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/custom16.png" alt="emptybills"/> | Clicking on a customer without any bills displays the no bills text. You can add bills and logout using the menu.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/bill_a10.png" alt="newbill"/> | Adding a new bill to a customer. Spinner is used to select the bill type. Fields cannot be left empty.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/invali11.png" alt="invalidnumber"/> | Mobile number validated while trying to add a new mobile bill.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/newly_10.png" alt="addedbill"/> | The newly added bill shows up for the customer with total amount.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/detail20.png" alt="detailedbill"/> | Clicking on a bill shows all the information for that particular bill.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/screen11.png" alt="splashscreen" width="800" height="600"/> | Custom splash screen that lasts for 5 seconds
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/logins10.png" alt="login" width="800" height="600"/> | Login Screen. Added custom text fields with icons and toggle password feature. User information is read from a json file. Hints and errors are added as well along with a remember me switch.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/webvie10.png" alt="aboutus" width="800" height="600"/> | About us page done using webview. Webview activity is also the Kotlin class.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/biomet10.png" alt="biometric" width="800" height="600"/> | Added biometric login option. Also gives the standard password login option.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/invali10.png" alt="invalid_login" width="800" height="600"/> | Error displayed when login credentials are not valid.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/custom15.png" alt="customerList" width="800" height="600"/> | List of customers shown in recycler view. Action bar buttons allow you to login and add a customer. Add customer button also added in the right corner.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/custom14.png" alt="customerAddition" width="800" height="600"/> | Customer addition form. Fields cannot be left empty.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/emailv10.png" alt="invalidEmail" width="800" height="600"/> | Email validation done with regex.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/newlya10.png" alt="newcustomer" width="800" height="600"/> | Newly added customer is now present in the customer list. You can also login with the new username and password.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/billsv10.png" alt="billslist" width="800" height="600"/> | Clicking on a customer gives you an overview of his bills and the total amount to be paid.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/custom16.png" alt="emptybills" width="800" height="600"/> | Clicking on a customer without any bills displays the no bills text. You can add bills and logout using the menu.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/bill_a10.png" alt="newbill" width="800" height="600"/> | Adding a new bill to a customer. Spinner is used to select the bill type. Fields cannot be left empty.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/invali11.png" alt="invalidnumber" width="800" height="600"/> | Mobile number validated while trying to add a new mobile bill.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/newly_10.png" alt="addedbill" width="800" height="600"/> | The newly added bill shows up for the customer with total amount.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/detail20.png" alt="detailedbill" width="800" height="600"/> | Clicking on a bill shows all the information for that particular bill.
 
 ## AGILE USED
 [Click here for GITSCRUM link](https://gitscrum.com/bp/5e9e09982d9c1)
