@@ -157,7 +157,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                         edtNumberText.setError("Invalid Phone number");
                         new MaterialAlertDialogBuilder(AddNewBillActivity.this)
                                 .setTitle("Invalid phone number")
-                                .setMessage("Please check the phonenumber you entered")
+                                .setMessage("Please check the phone number you entered")
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {

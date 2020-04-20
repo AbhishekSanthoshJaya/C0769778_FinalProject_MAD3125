@@ -56,4 +56,8 @@ public class HelperMethods {
         return s + " MINS";
     }
 
+    public String gbFormatter(Double s)
+    {
+        return s + " GB";
+    }
 }

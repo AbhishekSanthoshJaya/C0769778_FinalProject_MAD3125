@@ -59,7 +59,6 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
-        billsAdapter.notifyDataSetChanged();
         rvBillsList.setLayoutManager(mLinearLayoutManager);
         rvBillsList.setAdapter(billsAdapter);
 
@@ -96,6 +95,7 @@ public class ShowBillDetailsActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        return;
+        Intent mIntent = new Intent(ShowBillDetailsActivity.this, CustomerListActivity.class);
+        startActivity(mIntent);
     }
 }

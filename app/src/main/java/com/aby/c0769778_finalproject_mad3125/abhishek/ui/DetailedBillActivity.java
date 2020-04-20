@@ -88,7 +88,7 @@ public class DetailedBillActivity extends AppCompatActivity {
             Internet i = (Internet) billObj;
             txtFragBillId.setText(i.getBillId());
             txtFragBillDate.setText(i.getBillDate().toString());
-            txtFragPlanName.setText(HelperMethods.getInstance().doubleFormatter(i.getGbUsed()));
+            txtFragPlanName.setText(HelperMethods.getInstance().gbFormatter(i.getGbUsed()));
             txtFragManufac.setText(i.getProviderName());
             txtFragBillAmount.setText(HelperMethods.getInstance().doubleFormatter(i.getBillTotal()));
             imgBillType.setImageResource(R.drawable.interneticon);
