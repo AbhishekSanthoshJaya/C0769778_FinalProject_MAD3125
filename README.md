@@ -30,7 +30,7 @@ Screenshot | Description
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/bill_a10.png" alt="newbill"/> | Adding a new bill to a customer. Spinner is used to select the bill type. Fields cannot be left empty.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/invali11.png" alt="invalidnumber"/> | Mobile number validated while trying to add a new mobile bill.
 <img src="https://i93.servimg.com/u/f93/18/45/29/87/newly_10.png" alt="addedbill"/> | The newly added bill shows up for the customer with total amount.
-<img src="https://i93.servimg.com/u/f93/18/45/29/87/detail19.png" alt="detailedbill"/> | Clicking on a bill shows all the information for that particular bill.
+<img src="https://i93.servimg.com/u/f93/18/45/29/87/detail20.png" alt="detailedbill"/> | Clicking on a bill shows all the information for that particular bill.
 
 ## AGILE USED
 [Click here for GITSCRUM link](https://gitscrum.com/abysztech/c0769778-w2020-mad3125-fp)
