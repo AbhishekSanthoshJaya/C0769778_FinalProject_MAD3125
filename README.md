@@ -1,4 +1,4 @@
-# C0769778_FinalProject_MAD3125W2020
+# C0769778_W2020_MAD3125_FP
 <p align="center" ><img src="https://i.servimg.com/u/f93/18/45/29/87/mainlo10.png" alt="projectlogo" style="float: center; margin-right: 10px;"/></p>
 
 ## CUSTOMER BILL MANAGEMENT APP
