@@ -30,11 +30,6 @@ public class HelperMethods {
         return String.format("$ " + "%,.2f", d);
     }
 
-    public void makeToast(String message, Context context)
-    {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
-    }
-
     public boolean emailValidation(String s) {
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern pattern = Pattern.compile(regex);

@@ -26,17 +26,6 @@ public class DataRepository {
         return this.customerMap;
     }
 
-//    public Mobile getMobileBill(String billId) {
-//        for(Mobile mb : this.mobileBills)
-//            {
-//                if(mb.getBillId() == billId)
-//                {
-//                    return mb;
-//                }
-//            }
-//        return null;
-//        }
-
     public void loadData() {
         Customer c1 = new Customer("ID001",
                 "Abhishek",

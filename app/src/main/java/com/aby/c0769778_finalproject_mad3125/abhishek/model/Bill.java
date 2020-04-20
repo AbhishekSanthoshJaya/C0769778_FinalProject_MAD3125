@@ -33,31 +33,16 @@ public abstract class Bill implements Serializable {
         return billId;
     }
 
-    public void setBillId(String billId) {
-        this.billId = billId;
-    }
-
     public LocalDate getBillDate() {
         return billDate;
-    }
-
-    public void setBillDate(LocalDate billDate) {
-        this.billDate = billDate;
     }
 
     public BillType getBillType() {
         return billType;
     }
 
-    public void setBillType(BillType billType) {
-        this.billType = billType;
-    }
-
     public Double getBillTotal() {
         return billTotal;
     }
 
-    public void setBillTotal(Double billTotal) {
-        this.billTotal = billTotal;
-    }
 }

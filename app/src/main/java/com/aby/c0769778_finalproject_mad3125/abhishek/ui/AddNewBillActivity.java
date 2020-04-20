@@ -308,6 +308,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                             edtAgencyNameText.getText().toString(),
                             Double.parseDouble(edtUnitsUsedText.getText().toString()));
                     customerObj2.getCustomerBills().put(iObj.getBillId(),iObj);
+                    customerObj2.addBill(iObj.getBillId(), iObj);
                     Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
                     mIntent.putExtra("CustomerBills", customerObj2);
                     startActivity(mIntent);
@@ -396,8 +397,4 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
         edtUnitsUsedText.getText().clear();
     }
 
-    public void emptyFieldCheckerMob()
-    {
-
-    }
 }
