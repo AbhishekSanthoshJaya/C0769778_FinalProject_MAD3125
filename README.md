@@ -41,3 +41,9 @@ Screenshot | Description
 * [JournalDev.com](https://www.journaldev.com/14748/android-textinputlayout-example) - Used in designing TextInputLayouts
 * [Medium.com](https://medium.com/viithiisys/android-perfect-way-to-create-splash-screen-ca3c5bee137f) - Creating a splash screen
 * [Thecodeexpo.com](https://thecodeexpo.blogspot.com/2018/09/login-screen-remember-me-example.html) - Implementing remember me switch using shared preferences
+* [Develop.android.com](https://developer.android.com/guide/topics/ui/layout/recyclerview) - Working with recycler views
+* [HowtoDoinJava.com](https://howtodoinjava.com/regex/java-regex-validate-email-address/) - Email validation regex
+* [Sitepoint.com](https://www.sitepoint.com/transfer-data-between-activities-with-android-parcelable/) - Implementing parcelable transfer
+* [Youtube.com](https://www.youtube.com/watch?v=hwe1abDO2Ag) - Creating a datePicker
+* [Stackoverflow.com](https://stackoverflow.com/questions/3646415/how-to-create-edittext-with-rounded-corners) - Creating custom textboxes
+* [Joda.org](https://www.joda.org/joda-time/index.html) - Working with Joda-Time
