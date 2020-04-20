@@ -74,7 +74,7 @@ public class DetailedBillActivity extends AppCompatActivity {
             Hydro h = (Hydro) billObj;
             txtFragBillId.setText(h.getBillId());
             txtFragBillDate.setText(h.getBillDate().toString());
-            txtFragPlanName.setText(HelperMethods.getInstance().gbFormatter(h.getUnitsUsed()));
+            txtFragPlanName.setText(HelperMethods.getInstance().unitsFormatter(h.getUnitsUsed()));
             txtFragManufac.setText(h.getAgencyName());
             txtFragBillAmount.setText(HelperMethods.getInstance().doubleFormatter(h.getBillTotal()));
             imgBillType.setImageResource(R.drawable.watericon);

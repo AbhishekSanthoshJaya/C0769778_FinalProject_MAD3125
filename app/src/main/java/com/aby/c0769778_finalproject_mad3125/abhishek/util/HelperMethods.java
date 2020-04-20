@@ -60,4 +60,6 @@ public class HelperMethods {
     {
         return s + " GB";
     }
+
+    public String unitsFormatter(Integer s) {return s + " UNITS";}
 }

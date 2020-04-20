@@ -179,6 +179,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                                 Integer.parseInt(edtDataUsedText.getText().toString()),
                                 Integer.parseInt(edtMinsUsedText.getText().toString()));
                         customerObj2.getCustomerBills().put(mObj.getBillId(), mObj);
+                        customerObj2.addBill(mObj.getBillId(), mObj);
                         Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
                         mIntent.putExtra("CustomerBills", customerObj2);
                         startActivity(mIntent);
@@ -244,6 +245,7 @@ public class AddNewBillActivity extends AppCompatActivity implements AdapterView
                                 edtAgencyNameText.getText().toString(),
                                 Integer.parseInt(edtUnitsUsedText.getText().toString()));
                         customerObj2.getCustomerBills().put(hObj.getBillId(), hObj);
+                        customerObj2.addBill(hObj.getBillId(), hObj);
                         Intent mIntent = new Intent(AddNewBillActivity.this, ShowBillDetailsActivity.class);
                         mIntent.putExtra("CustomerBills", customerObj2);
                         startActivity(mIntent);
